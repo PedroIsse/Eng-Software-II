@@ -96,10 +96,17 @@ Com essas funcionalidades, o **UniRide** não só facilita o deslocamento dos al
 
 - **APIs:** Mercado Pago, Pagar.me, PagSeguro, Stripe (Escolher conforme necessidade)
 
----
-
 # Segurança e Conformidade:
 
 - **PCI DSS:** (Payment Card Industry Data Security Standard)
 - **LGPD:** (Lei Geral de Proteção de Dados)
 - **Anti-Fraude:** Implementação de sistemas para proteção contra fraudes financeiras.
+
+# Integrantes:
+
+- Pedro Isse de Souza | 0030482411006
+- Lauren Rodrigues Oliveira | 0030482411028
+- Matheus Portes Ourique | 0030482411024
+- Evandro Rodrigues de Arruda | 00304824110
+
+---
