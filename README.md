@@ -107,6 +107,6 @@ Com essas funcionalidades, o **UniRide** não só facilita o deslocamento dos al
 - Pedro Isse de Souza | 0030482411006
 - Lauren Rodrigues Oliveira | 0030482411028
 - Matheus Portes Ourique | 0030482411024
-- Evandro Rodrigues de Arruda | 00304824110
+- Evandro Rodrigues de Arruda | 0030482411017
 
 ---
