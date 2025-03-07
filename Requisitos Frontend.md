@@ -9,6 +9,6 @@ aqui vai uma visão geral as tecnologias implementadas no serviço web: react js
 
 Lorem ipsum dolor sit amet consectetur adipiscing elit. Nunc non lobortis nisl. Proin dapibus augue sit amet interdum congue. Pellentesque quis efficitur nisl. 
 
-"[logo java script](/Assets/jscript.png "Logo JavaScript")
+![logo java script](/Assets/jscript.png "Logo JavaScript")
 
 
