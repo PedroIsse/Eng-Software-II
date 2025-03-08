@@ -33,7 +33,7 @@ Ideal para prototipação e projetos que podem evoluir com aprendizado de máqui
 Escolhemos o Express porque ele é um framework minimalista para Node.js, o que nos dá mais liberdade para moldar a aplicação de acordo com as necessidades específicas do projeto.
 Esse nível de flexibilidade é essencial, pois sabemos que a API de caronas pode exigir personalizações ao longo do desenvolvimento.
 Além disso, o Express é leve e altamente eficiente, aproveitando a arquitetura assíncrona do Node.js, o que nos permite lidar com grandes volumes de requisições simultâneas,
-algo muito importante para um sistema de caronas universitárias, onde muitos usuários podem interagir ao mesmo tempo. Sua simplicidade também facilita o desenvolvimento rápido de APIs RESTful,
+algo muito importante para o UniRide, onde muitos usuários podem interagir ao mesmo tempo. Sua simplicidade também facilita o desenvolvimento rápido de APIs RESTful,
 o que é fundamental para criar um sistema modular e baseado em microsserviços. O suporte a middlewares permite que possamos tratar as requisições de forma mais organizada e eficiente.
 Por fim, o Express se integra facilmente com diversas bibliotecas e pacotes do ecossistema Node.js, o que acelera a implementação de funcionalidades como autenticação, logs e validação de dados.
 
