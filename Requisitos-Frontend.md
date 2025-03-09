@@ -6,7 +6,7 @@ e isso envolve a utilização de tecnologias voltadas para o frontend do desenvo
 e o uso de frameworks como o **React.js** para estruturar o desenvolvimento do app.
 
 ---
-## **JavaScript**
+### **JavaScript**
 <p align="center"> 
 <img src = "./Assets/jscript.png" width="200" height="200">
 <p>
@@ -21,7 +21,7 @@ Outros atrativos para a utilização do JavaScript são sua segurança, atualiza
 
 ---
 
-## **TypeScript**
+### **TypeScript**
 <p align="center"> 
 <img src = "/Assets/typescript.png" width="200" height="200">
 <p>
@@ -64,4 +64,9 @@ ___
 <img src = "./Assets/Logo-XCode.png" width="200" height="200">
 <p>
 
-Decidirmos por usar a ferramenta Xcode
+Decidirmos por usar a ferramenta Xcode como IDE de desenvolvimento pois este detém uma grande integração com o ambiente apple, dessa forma trabalhando de maneira fluída com seu sistema operacional, além de suporte nativo e otimizado para a lnguagem swift.
+
+O xcode  possui poderosas ferramentas de depuração e análise de desempenho (como o Instruments) que ajudam a identificar problemas no código, auxiliando assim na otimização do código.
+
+Essa ferramenta foi escolhida também pela facilidade no processo de distribuição de aplicativos, seja na App Store, TestFlight ou para distribuição interna em dispositivos.
+
