@@ -7,7 +7,9 @@ e o uso de frameworks como o **React.js** para estruturar o desenvolvimento do a
 
 ---
 ## **JavaScript**
-![logo java script](./Assets/jscript.png "Logo JavaScript")
+<p align="center"> 
+<img src = "./Assets/jscript.png" width="200" height="200">
+<p>
 
 Uma das Linguagens de programação mais utilizadas no mundo, o JavaScript, ou JS, é uma linguagem de interpretação de alto nível, e junto do  HTML e CSS formam a base de toda a internet atual.
 
@@ -20,7 +22,9 @@ Outros atrativos para a utilização do JavaScript são sua segurança, atualiza
 ---
 
 ## **TypeScript**
-![logo TypeScript](./Assets/typescript.png "Logo TypeScript")
+<p align="center"> 
+<img src = "/Assets/typescript.png" width="200" height="200">
+<p>
 
 O TypeScript é uma linguagem voltada para auxiliar no desenvolvimento web com o JavaScript, adicionando novas funcionalidades ao JS, como escrita estática e servindo também como uma segurança adicional, visto que por causa da facilidade de programação do JavaScript, a chance de fazer algum erro no código que depois quebraria a aplicação toda era muito grande.   
 
