@@ -6,14 +6,8 @@ e isso envolve a utilização de tecnologias voltadas para o frontend do desenvo
 e o uso de frameworks como o **React.js** para estruturar o desenvolvimento do app.
 
 ---
-
-<<<<<<< HEAD
-### **JavaScript**
-![logo java script](/Assets/jscript.png "Logo JavaScript")
-=======
 ## **JavaScript**
 ![logo java script](./Assets/jscript.png "Logo JavaScript")
->>>>>>> d6a51aa9ee6f090375b8cdc5cbeaaed6f30c4fde
 
 Uma das Linguagens de programação mais utilizadas no mundo, o JavaScript, ou JS, é uma linguagem de interpretação de alto nível, e junto do  HTML e CSS formam a base de toda a internet atual.
 
@@ -25,13 +19,8 @@ Outros atrativos para a utilização do JavaScript são sua segurança, atualiza
 
 ---
 
-<<<<<<< HEAD
-### **TypeScript**
-![logo TypeScript](/Assets/typescript.png "Logo TypeScript")
-=======
 ## **TypeScript**
 ![logo TypeScript](./Assets/typescript.png "Logo TypeScript")
->>>>>>> d6a51aa9ee6f090375b8cdc5cbeaaed6f30c4fde
 
 O TypeScript é uma linguagem voltada para auxiliar no desenvolvimento web com o JavaScript, adicionando novas funcionalidades ao JS, como escrita estática e servindo também como uma segurança adicional, visto que por causa da facilidade de programação do JavaScript, a chance de fazer algum erro no código que depois quebraria a aplicação toda era muito grande.   
 
@@ -46,15 +35,15 @@ O TypeScript foi desenvolvido especificamente para corrigir esses erros e ainda 
 <img src = "./Assets/Logo-Swift.png" width="200" height="200">
 <p>
 
-        A linguagem Swift foi a escolhida para o desenvolvimento do projeto em IOS pois diferente da sua antecessora Objective-C, possui uma sintaxe clara, oferece mais segurança por meio de recursos de tratamento de erros mais robustos e inferência de tipos e devido a sua modernidade, esta apresenta melhor desempenho em hardwares atuais.
+  A linguagem Swift foi a escolhida para o desenvolvimento do projeto em IOS pois diferente da sua antecessora Objective-C, possui uma sintaxe clara, oferece mais segurança por meio de recursos de tratamento de erros mais robustos e inferência de tipos e devido a sua modernidade, esta apresenta melhor desempenho em hardwares atuais.
 
-        Outros motivos pelos quais a escolhemos como principal linguagem para o desenvolvimento ios foi sua capacidade de:
+Outros motivos pelos quais a escolhemos como principal linguagem para o desenvolvimento ios foi sua capacidade de:
 
-            1. Programação assíncrona : Permitindo facilmente lidar com tarefas que levam tempo sem bloquear a interface do usuário.
+1. Programação assíncrona : Permitindo facilmente lidar com tarefas que levam tempo sem bloquear a interface do usuário.
 
-            2. Funções de ordem superior : Permite passar funções como parâmetros para outras funções ou retornar funções como valores.
+2. Funções de ordem superior : Permite passar funções como parâmetros para outras funções ou retornar funções como valores.
 
-            3.Playgrounds interativos : Permite escrever código Swift em um ambiente de sandbox, assim facilitando testes.
+3.Playgrounds interativos : Permite escrever código Swift em um ambiente de sandbox, assim facilitando testes.
 
 ___
 
@@ -62,8 +51,7 @@ ___
 <p align="center"> 
 <img src = "./Assets/Logo-SwiftUI.png" width="200" height="200">
 <p>
-
-        Escolhemos o SwiftUI como Framework Frontend, pois este apresenta varias características positivas as quais nos chamou atenção como a facilidade de criar e manter um código limpo, a possibilidade de utilizarmos o live preview no desenvolvimento, para assim o agilizar, e por termos interesse em aproveitar recursos como Dark Mode, Dynamic Type e acessibilidade.
+Escolhemos o SwiftUI como Framework Frontend, pois este apresenta varias características positivas as quais nos chamou atenção como a facilidade de criar e manter um código limpo, a possibilidade de utilizarmos o live preview no desenvolvimento, para assim o agilizar, e por termos interesse em aproveitar recursos como Dark Mode, Dynamic Type e acessibilidade.
 
 ___
 
@@ -72,6 +60,4 @@ ___
 <img src = "./Assets/Logo-XCode.png" width="200" height="200">
 <p>
 
-
-
-
+Decidirmos por usar a ferramenta Xcode
