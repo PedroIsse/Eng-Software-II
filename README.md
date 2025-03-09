@@ -44,7 +44,7 @@ Com essas funcionalidades, o **UniRide** não só facilita o deslocamento dos al
 
 ### 2. iOS:
 - **Linguagem:** Swift
-- **Framework:** SwiftUI e UIKit
+- **Framework:** SwiftUI 
 - **Ferramentas:** Xcode
 
 ### 3. Web:

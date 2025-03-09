@@ -33,17 +33,38 @@ Ideal para prototipação e projetos que podem evoluir com aprendizado de máqui
 ## **Express.js**
 ![logo Express.js](/Assets/expressjs.png "Logo Express.js")
 
+<<<<<<< HEAD
+Escolhemos o Express porque ele é um framework minimalista para Node.js, o que nos dá mais liberdade para moldar a aplicação de acordo com as necessidades específicas do projeto.
+Esse nível de flexibilidade é essencial, pois sabemos que a API de caronas pode exigir personalizações ao longo do desenvolvimento.
+Além disso, o Express é leve e altamente eficiente, aproveitando a arquitetura assíncrona do Node.js, o que nos permite lidar com grandes volumes de requisições simultâneas,
+algo muito importante para o UniRide, onde muitos usuários podem interagir ao mesmo tempo. Sua simplicidade também facilita o desenvolvimento rápido de APIs RESTful,
+o que é fundamental para criar um sistema modular e baseado em microsserviços. O suporte a middlewares permite que possamos tratar as requisições de forma mais organizada e eficiente.
+Por fim, o Express se integra facilmente com diversas bibliotecas e pacotes do ecossistema Node.js, o que acelera a implementação de funcionalidades como autenticação, logs e validação de dados.
+=======
 Escolhemos o Express porque ele é um framework minimalista para Node.js, proporcionando maior liberdade para moldar a aplicação de acordo com as necessidades específicas do projeto. Esse nível de flexibilidade é essencial, pois a API de caronas pode exigir personalizações ao longo do desenvolvimento.
 
 Além disso, o Express é leve e altamente eficiente, aproveitando a arquitetura assíncrona do Node.js, o que nos permite lidar com grandes volumes de requisições simultâneas — um fator crucial para o UniRide, onde muitos usuários podem interagir ao mesmo tempo. Sua simplicidade também facilita o desenvolvimento rápido de APIs RESTful, fundamental para a criação de um sistema modular e baseado em microsserviços.
 
 O suporte a middlewares permite tratar as requisições de forma mais organizada e eficiente. Por fim, o Express se integra facilmente com diversas bibliotecas e pacotes do ecossistema Node.js, acelerando a implementação de funcionalidades como autenticação, logs e validação de dados.
+>>>>>>> d6a51aa9ee6f090375b8cdc5cbeaaed6f30c4fde
 
 ---
 
 ## **Spring Boot**
 ![logo Spring Boot](/Assets/springboot.png "Logo Spring Boot")
 
+<<<<<<< HEAD
+Escolhemos o Spring Boot porque ele é projetado para tornar a configuração de projetos Java mais simples e rápida, permitindo que nossa equipe crie aplicações com o mínimo de configuração necessária,
+o que acelera significativamente o desenvolvimento, especialmente quando lidamos com microsserviços complexos.
+O Spring Boot se integra facilmente com o Spring Cloud, oferecendo suporte completo para a construção de microsserviços, o que é ideal para o nosso projeto de caronas universitárias,
+pois possibilita a divisão de funcionalidades como gerenciamento de reservas, autenticação e notificações em serviços independentes e escaláveis.
+Além disso, o Spring Boot oferece integração nativa com o Spring Security, o que garante que a autenticação e autorização sejam implementadas de forma robusta e segura.
+Seu sistema de gerenciamento de dependências também facilita a manutenção de bibliotecas e atualizações no projeto, mantendo tudo organizado e atualizado.
+Em termos de desempenho e escalabilidade, o Spring Boot é altamente eficiente, o que é essencial para lidar com o aumento de usuários e dados no sistema,
+além de oferecer excelente performance em ambientes de produção, com suporte a cache, banco de dados e balanceamento de carga. O vasto ecossistema do Spring Framework,
+que inclui componentes como Spring Data, Spring Config e Spring Actuator, também nos proporciona ferramentas poderosas para persistência de dados, configuração centralizada e monitoramento,
+permitindo que criemos um sistema robusto e fácil de manter.
+=======
 Escolhemos o Spring Boot porque ele foi projetado para simplificar e agilizar a configuração de projetos Java, permitindo que nossa equipe desenvolva aplicações com o mínimo de configuração necessária. Isso acelera significativamente o desenvolvimento, especialmente ao lidarmos com microsserviços complexos.  
 
 O Spring Boot se integra facilmente com o Spring Cloud, oferecendo suporte completo para a construção de microsserviços. Essa característica é ideal para o nosso projeto de caronas universitárias, pois possibilita a divisão de funcionalidades, como gerenciamento de reservas, autenticação e notificações, em serviços independentes e escaláveis.  
@@ -53,5 +74,6 @@ Além disso, o Spring Boot oferece integração nativa com o Spring Security, ga
 Em termos de desempenho e escalabilidade, o Spring Boot é altamente eficiente, essencial para lidar com o crescimento do número de usuários e dados no sistema. Ele também proporciona excelente performance em ambientes de produção, com suporte a cache, banco de dados e balanceamento de carga.  
 
 O vasto ecossistema do Spring Framework, que inclui componentes como Spring Data, Spring Config e Spring Actuator, nos oferece ferramentas poderosas para persistência de dados, configuração centralizada e monitoramento, permitindo a criação de um sistema robusto e fácil de manter.
+>>>>>>> d6a51aa9ee6f090375b8cdc5cbeaaed6f30c4fde
 
 ---
