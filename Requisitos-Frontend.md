@@ -18,6 +18,7 @@ e o uso de frameworks como o **React.js** para estruturar o desenvolvimento do a
 Uma das Linguagens de programação mais utilizadas no mundo, o JavaScript, ou JS, é uma linguagem de interpretação de alto nível, e junto do  HTML e CSS formam a base de toda a internet atual.
 
 Um dos principais atrativos do JavaScript é a o destaque em deixar as paginas web mais dinamicas e aumentando a interatividade delas,  
+    
 como um conteúdo que possui uma animação que fica constantemente mudando.
 
 Outros atrativos para a utilização do JavaScript são sua segurança, atualizações constantes e a Criação de novas bibliotecas, frameworks e códigos prontos.
@@ -39,4 +40,38 @@ O TypeScript foi desenvolvido especificamente para corrigir esses erros e ainda 
 ---
 
 ## Tecnologias IOs
+
+### Swift
+<p align="center"> 
+<img src = "./Assets/Logo-Swift.png" width="200" height="200">
+<p>
+
+        A linguagem Swift foi a escolhida para o desenvolvimento do projeto em IOS pois diferente da sua antecessora Objective-C, possui uma sintaxe clara, oferece mais segurança por meio de recursos de tratamento de erros mais robustos e inferência de tipos e devido a sua modernidade, esta apresenta melhor desempenho em hardwares atuais.
+
+        Outros motivos pelos quais a escolhemos como principal linguagem para o desenvolvimento ios foi sua capacidade de:
+
+            1. Programação assíncrona : Permitindo facilmente lidar com tarefas que levam tempo sem bloquear a interface do usuário.
+
+            2. Funções de ordem superior : Permite passar funções como parâmetros para outras funções ou retornar funções como valores.
+
+            3.Playgrounds interativos : Permite escrever código Swift em um ambiente de sandbox, assim facilitando testes.
+
+___
+
+### SwiftIU
+<p align="center"> 
+<img src = "./Assets/Logo-SwiftUI.png" width="200" height="200">
+<p>
+
+        Escolhemos o SwiftUI como Framework Frontend, pois este apresenta varias características positivas as quais nos chamou atenção como a facilidade de criar e manter um código limpo, a possibilidade de utilizarmos o live preview no desenvolvimento, para assim o agilizar, e por termos interesse em aproveitar recursos como Dark Mode, Dynamic Type e acessibilidade.
+
+___
+
+### Xcode 
+<p align="center"> 
+<img src = "./Assets/Logo-XCode.png" width="200" height="200">
+<p>
+
+
+
 
