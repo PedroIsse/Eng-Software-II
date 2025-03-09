@@ -3,7 +3,7 @@
 # Linguagens de Programação
 
 ## **Node.js**
-![logo Node.js](/Assets/nomedaimagem.png "Logo Node.js")
+![logo Node.js](/Assets/nodejs.png "Logo Node.js")
 Ideal para aplicações de alto tráfego e I/O intensivo.
 Sua arquitetura assíncrona e baseada em eventos permite lidar com muitas requisições simultâneas.
 Também possibilita usar JavaScript tanto no frontend quanto no backend, o que facilita a integração e o desenvolvimento.
@@ -11,14 +11,14 @@ Também possibilita usar JavaScript tanto no frontend quanto no backend, o que f
 ---
 
 ## **Java**
-![logo java](/Assets/nomedaimagem.png "Logo Java")
+![logo java](/Assets/java.png "Logo Java")
 Linguagem robusta e escalável, ideal para sistemas empresariais de grande porte.
 O Spring Boot facilita o desenvolvimento de microsserviços e oferece suporte nativo a segurança, persistência de dados e comunicação assíncrona.
 
 ---
 
 ## **Python**
-![logo Python](/Assets/nomedaimagem.png "Logo Python")
+![logo Python](/Assets/python.png "Logo Python")
 
 Sintaxe simples e desenvolvimento rápido.
 Excelente para integrar funcionalidades de AI/ML e análise de dados, além de ser versátil e fácil de integrar com outros sistemas.
@@ -29,7 +29,7 @@ Ideal para prototipação e projetos que podem evoluir com aprendizado de máqui
 # Frameworks
 
 ## **Express.js**
-![logo Express.js](/Assets/nomedaimagem.png "Logo Express.js")
+![logo Express.js](/Assets/expressjs.png "Logo Express.js")
 Escolhemos o Express porque ele é um framework minimalista para Node.js, o que nos dá mais liberdade para moldar a aplicação de acordo com as necessidades específicas do projeto.
 Esse nível de flexibilidade é essencial, pois sabemos que a API de caronas pode exigir personalizações ao longo do desenvolvimento.
 Além disso, o Express é leve e altamente eficiente, aproveitando a arquitetura assíncrona do Node.js, o que nos permite lidar com grandes volumes de requisições simultâneas,
@@ -40,7 +40,7 @@ Por fim, o Express se integra facilmente com diversas bibliotecas e pacotes do e
 ---
 
 ## **Spring Boot**
-![logo Spring Boot](/Assets/nomedaimagem.png "Logo Spring Boot")
+![logo Spring Boot](/Assets/springboot.png "Logo Spring Boot")
 Escolhemos o Spring Boot porque ele é projetado para tornar a configuração de projetos Java mais simples e rápida, permitindo que nossa equipe crie aplicações com o mínimo de configuração necessária,
 o que acelera significativamente o desenvolvimento, especialmente quando lidamos com microsserviços complexos.
 O Spring Boot se integra facilmente com o Spring Cloud, oferecendo suporte completo para a construção de microsserviços, o que é ideal para o nosso projeto de caronas universitárias,
