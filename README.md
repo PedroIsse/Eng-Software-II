@@ -35,7 +35,7 @@ Com essas funcionalidades, o **UniRide** não só facilita o deslocamento dos al
 
 # **Técnologias:**
 
-# Frontend:
+# [Frontend](./Requisitos-Frontend.md):
 
 ### 1. Android:
 - **Linguagem:** Kotlin (é oficialmente suportado pela Google para desenvolvimento Android)
@@ -55,7 +55,7 @@ Com essas funcionalidades, o **UniRide** não só facilita o deslocamento dos al
 
 ---
 
-# Backend:
+# [Backend](./Requisitos-Backend.md):
 
 ### 1. Linguagens de Programação:
 - **Node.js**, **Java** e **Python**
@@ -68,7 +68,7 @@ Com essas funcionalidades, o **UniRide** não só facilita o deslocamento dos al
 
 ---
 
-# Banco de Dados e Armazenamento:
+# [Banco de Dados e Armazenamento](./Requisitos-BD-Arquitetura.md):
 
 - **SQL:** PostgreSQL (Dados relacionais como: usuários, corridas, pagamentos e histórico de viagens)
 - **NoSQL:** MongoDB (Dados não estruturados ou dinâmicos, como logs de eventos e notificações)
