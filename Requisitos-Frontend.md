@@ -33,7 +33,7 @@ O TypeScript foi desenvolvido especificamente para corrigir esses erros e ainda 
 ---
 ### **React**
 <p align="center">
-<img src - "./Assets/react.png" width="200" height="200">
+<img src = "./Assets/react.png" width="200" height="200">
 <p>
 
 Optamos por usar o Framework React em nosso aplicativo por sua versatilidade, podendo ser utilizado em vários aspectos da aplicação, como na parte de anúncios ou qualquer  
