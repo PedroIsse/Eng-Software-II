@@ -104,7 +104,7 @@ Além disso, o Jetpack Compose permite uma maior flexibilidade na construção d
 ---
 ### Android Studio
 <p align="center"> 
-<img src = "./Assets/Logo-Android Studio.png" width="200" height="200">
+<img src = "./Assets/Logo-Android-Studio.png" width="200" height="200">
 <p>
 
 Escolhemos o Android Studio como IDE de desenvolvimento devido à sua profunda integração com o ecossistema Android, proporcionando um fluxo de trabalho fluido e otimizado para a linguagem Kotlin. Além disso, a ferramenta conta com suporte nativo ao Jetpack Compose, facilitando a criação de interfaces modernas de maneira declarativa.
