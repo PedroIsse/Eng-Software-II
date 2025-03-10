@@ -36,8 +36,7 @@ O TypeScript foi desenvolvido especificamente para corrigir esses erros e ainda 
 <img src = "./Assets/react.png" width="200" height="200">
 <p>
 
-Optamos por usar o Framework React em nosso aplicativo por sua versatilidade, podendo ser utilizado em vários aspectos da aplicação, como na parte de anúncios ou qualquer  
-outra parte que precise ter um comportamento específico na tela.
+Optamos por usar o Framework React em nosso aplicativo por sua versatilidade, podendo ser utilizado em vários aspectos da aplicação, como na parte de anúncios ou qualquer outra parte que precise ter um comportamento específico na tela.
 Sendo um Framework baseado em JavaScript, ele se integra com outras funcionalidades da parte web da aplicação, por ser altamente escalável e flexível, sendo ideal em um cenário que necessita de constantes atualizações da interface do usuário.
 
 ---
