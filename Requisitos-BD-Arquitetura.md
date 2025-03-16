@@ -67,4 +67,12 @@ O **DynamoDB** é um banco de dados NoSQL totalmente gerido e altamente escaláv
 
 ## **Armazenamento:**
 
+### **S3 Intelligent-Tiering:**
+
+![S3 Intelligent Tiering](./Assets/s3-intelligent-tiering.jpg)
+
+O armazenamento foi pensado, novamente, utilizando a AWS. Para isso, escolhemos o **S3 Intelligent-Tiering**, pois ele possui um sistema que move automaticamente os arquivos para diferentes camadas, levando em consideração a *frequência com que o objeto é acessado*. Dessa forma, reduzimos os custos de armazenamento, já que, quanto menos acessado um objeto for, mais barato será seu armazenamento. Além disso, a recuperação dos dados é imediata, garantindo que a performance não seja afetada.
+
+Objetos acessados com frequência incluem fotos de perfis de usuários, tanto motoristas quanto passageiros, além da foto do veículo utilizado para a carona. Já informações para **conformidade, segurança e auditoria** ficam armazenadas em camadas de acesso menos frequente. Isso inclui registros de logs das corridas e documentos do motorista, como *foto da CNH, CRLV, RG, entre outros*.
+
 ## **Arquiteturas AWS:** 
