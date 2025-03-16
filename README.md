@@ -2,9 +2,15 @@
 
 # UniRide
 
-O **UniRide** é um aplicativo colaborativo desenvolvido para facilitar o transporte dos alunos da **Fatec Sorocaba**. Seu objetivo é conectar motoristas e passageiros que frequentam a instituição, criando um sistema de **caronas eficiente, econômico e sustentável**. A plataforma permite que os estudantes encontrem e ofereçam caronas de maneira **segura e organizada**, contribuindo para a **redução de custos com transporte**, diminuindo o número de veículos no campus e **incentivando a interação** entre os alunos.
+O **UniRide** é um aplicativo colaborativo desenvolvido para facilitar o transporte dos alunos da Fatec Sorocaba ou outras faculdades de **sorocaba e região**. Seu objetivo é conectar motoristas e passageiros que frequentam a instituição, criando um sistema de caronas **eficiente, econômico e sustentável**. A plataforma permite que os estudantes encontrem e ofereçam caronas de maneira segura e organizada, contribuindo para a redução de custos com transporte, diminuindo o número de veículos no campus e incentivando a interação entre os alunos.
 
-Além de proporcionar **economia** para os usuários, o UniRide também busca **promover a sustentabilidade**, reduzindo o impacto ambiental causado pelo excesso de veículos em circulação. Ao compartilhar viagens, os estudantes podem **otimizar seus deslocamentos** de forma prática e conveniente, organizando caronas de acordo com **horários e destinos compatíveis**.
+Além de proporcionar **economia** para os usuários, o UniRide também busca promover a **sustentabilidade**, reduzindo o impacto ambiental causado pelo excesso de veículos em circulação. Ao compartilhar viagens, os estudantes podem otimizar seus deslocamentos de forma **prática e conveniente**, organizando caronas de acordo com horários e destinos compatíveis.
+
+A **segurança** dos usuários é uma prioridade na plataforma. Para garantir um ambiente confiável, o aplicativo conta com verificação de identidade, permitindo validar a autenticidade dos usuários, e um sistema de avaliações, onde motoristas e passageiros podem compartilhar suas experiências, promovendo transparência e confiança nas interações. Essas funcionalidades asseguram que os usuários possam se conectar de maneira tranquila e protegida. Além disso, ao facilitar o deslocamento até a instituição, o UniRide contribui para uma maior integração acadêmica, alinhando-se aos horários das aulas e demais eventos universitários.
+
+O aplicativo oferece diversas funcionalidades pensadas para atender às necessidades dos estudantes. O cadastro seguro garante a autenticidade e segurança dos perfis, enquanto a busca e oferta de caronas facilitam a conexão entre motoristas e passageiros. O sistema de avaliações possibilita feedbacks para a melhoria contínua da experiência. O chat interno permite a **comunicação** direta entre usuários, proporcionando uma interação mais eficiente. Além disso, a integração com o calendário acadêmico possibilita que os alunos organizem suas viagens de maneira ainda mais prática e eficiente. Com essas funcionalidades, o UniRide não só facilita o deslocamento dos alunos, como também fortalece o senso de comunidade, promovendo um meio de transporte mais sustentável, econômico e colaborativo.
+
+O UniRide também se preocupa com a **acessibilidade**, garantindo que o aplicativo seja inclusivo para todos os usuários. A interface foi desenvolvida para ser intuitiva e de fácil navegação, incluindo opções de acessibilidade como compatibilidade com leitores de tela e ajustes de contraste para pessoas com deficiência visual. Além disso, o sistema permite que motoristas e passageiros informem necessidades especiais, facilitando a organização de caronas adaptadas e promovendo uma experiência mais igualitária e acessível para todos.
 
 ---
 
@@ -27,31 +33,6 @@ Além disso, a AWS oferece diferentes **modelos de pagamento**, permitindo uma g
 - **Tendência de redução de preços**: À medida que a AWS expande sua infraestrutura global e otimiza seus serviços, os custos tendem a diminuir, tornando a nuvem ainda mais acessível.  
 
 Optar pela AWS nos permite focar no crescimento do negócio e no aprimoramento do **UniRide**, sem precisar nos preocupar com a complexidade e os altos custos de um data center próprio.  
-
----
-
-## **Segurança e Confiabilidade**
-
-A **segurança dos usuários** é uma prioridade na plataforma. Para garantir um **ambiente confiável**, o aplicativo conta com:
-- **Verificação de identidade:** Para validar a autenticidade dos usuários.
-- **Sistema de avaliações:** Permitindo que motoristas e passageiros avaliem suas experiências, promovendo transparência e confiança nas interações.
-
-Essas funcionalidades asseguram que os usuários possam se conectar de maneira **tranquila e protegida**. Além disso, ao facilitar o deslocamento até a instituição, o UniRide contribui para uma **maior integração acadêmica**, alinhando-se aos horários das aulas e demais eventos universitários.
-
----
-
-## **Funcionalidades do UniRide**
-
-O aplicativo oferece **diversas funcionalidades** pensadas para atender às necessidades dos estudantes, incluindo:
-- **Cadastro seguro:** Garantindo a autenticidade e segurança dos perfis.
-- **Busca e oferta de caronas:** Facilitando a conexão entre motoristas e passageiros.
-- **Sistema de avaliações:** Para feedback e melhoria contínua da experiência.
-- **Chat interno:** Para comunicação direta entre usuários.
-- **Integração com o calendário acadêmico:** Permitindo que os alunos organizem suas viagens de maneira **ainda mais eficiente**.
-
----
-
-Com essas funcionalidades, o **UniRide** não só facilita o deslocamento dos alunos da Fatec Sorocaba, como também **fortalece o senso de comunidade**, promovendo um meio de transporte mais **sustentável, econômico e colaborativo**.
 
 ---
 
