@@ -45,7 +45,7 @@ Portanto, a escolha de Banco de Dados Relacional ideal seria o **Amazon Aurora**
 
 - **Menor custo e maior desempenho:** Oferece uma solução de banco de dados relacional de alto desempenho, sem o custo de soluções tradicionais.
 
-- **ElastiCache**
+- **ElastiCache:** Considerando a possibilidade de momentos de alta demanda, com um grande volume de requisições ao banco de dados, uma solução eficiente para mitigar esse problema é o uso de **memória em cache**. Dessa forma, os dados mais requisitados são armazenados temporariamente, permitindo sua recuperação com a menor latência possível. O Amazon ElastiCache é um serviço de cache gerenciado que suporta Redis e Memcached, ajudando a reduzir a carga sobre o banco de dados e a melhorar o desempenho do sistema.
 
 ### **Amazon DynamoDB:**
 
@@ -63,6 +63,8 @@ O **DynamoDB** é um banco de dados NoSQL totalmente gerido e altamente escaláv
 
 - **Baixa latência:** Ideal para operações em tempo real, como atualizar a localização de motoristas e passageiros ou gerenciar solicitações de carona.
 
-- **DynamoDB Accelerator (DAX)**
+- **DynamoDB Accelerator (DAX):** Novamente, considerando momentos de alta demanda, com um grande volume de requisições ao banco de dados, uma solução eficiente para mitigar esse problema é o uso de **memória em cache**. Dessa forma, o DAX é um serviço de cache específico para o Amazon DynamoDB, projetado para oferecer leituras ultrarrápidas com latência de microssegundos. Ele funciona como um cache em memória totalmente gerenciado que armazena automaticamente os dados mais acessados, reduzindo a necessidade de consultas diretas ao DynamoDB.
 
-## **Arquiteturas AWS:**
+## **Armazenamento:**
+
+## **Arquiteturas AWS:** 
