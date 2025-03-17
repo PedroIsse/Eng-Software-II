@@ -36,6 +36,12 @@ Optar pela AWS nos permite focar no crescimento do negócio e no aprimoramento d
 
 ---
 
+# **Público Alvo - Requisitos:**
+
+### [Persona e Users Stories](./Personas-e-User-Stories.md)
+
+---
+
 # **Técnologias:**
 
 # [Frontend](./Requisitos-Frontend.md):
