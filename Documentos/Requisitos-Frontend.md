@@ -8,7 +8,7 @@ e o uso de frameworks como o **React.js** para estruturar o desenvolvimento do a
 ---
 ### **JavaScript**
 <p align="center"> 
-<img src = "./Assets/jscript.png" width="200" height="200">
+<img src = "../Assets/jscript.png" width="200" height="200">
 <p>
 
 Uma das Linguagens de programação mais utilizadas no mundo, o JavaScript, ou JS, é uma linguagem de interpretação de alto nível, e junto do  HTML e CSS formam a base de toda a internet atual.
@@ -23,7 +23,7 @@ Outros atrativos para a utilização do JavaScript são sua segurança, atualiza
 
 ### **TypeScript**
 <p align="center"> 
-<img src = "./Assets/typescript.png" width="200" height="200">
+<img src = "../Assets/typescript.png" width="200" height="200">
 <p>
 
 O TypeScript é uma linguagem voltada para auxiliar no desenvolvimento web com o JavaScript, adicionando novas funcionalidades ao JS, como escrita estática e servindo também como uma segurança adicional, visto que por causa da facilidade de programação do JavaScript, a chance de fazer algum erro no código que depois quebraria a aplicação toda era muito grande.   
@@ -33,7 +33,7 @@ O TypeScript foi desenvolvido especificamente para corrigir esses erros e ainda 
 ---
 ### **React**
 <p align="center">
-<img src = "./Assets/react.png" width="200" height="200">
+<img src = "../Assets/react.png" width="200" height="200">
 <p>
 
 Optamos por usar o Framework React em nosso aplicativo por sua versatilidade, podendo ser utilizado em vários aspectos da aplicação, como na parte de anúncios ou qualquer outra parte que precise ter um comportamento específico na tela.
@@ -45,7 +45,7 @@ Sendo um Framework baseado em JavaScript, ele se integra com outras funcionalida
 
 ### Swift
 <p align="center"> 
-<img src = "./Assets/Logo-Swift.png" width="200" height="200">
+<img src = "../Assets/Logo-Swift.png" width="200" height="200">
 <p>
 
 A linguagem Swift foi a escolhida para o desenvolvimento do projeto em IOS pois diferente da sua antecessora Objective-C, possui uma sintaxe clara, oferece mais segurança por meio de recursos de tratamento de erros mais robustos e inferência de tipos e devido a sua modernidade, esta apresenta melhor desempenho em hardwares atuais.
@@ -62,7 +62,7 @@ ___
 
 ### SwiftIU
 <p align="center"> 
-<img src = "./Assets/Logo-SwiftUI.png" width="200" height="200">
+<img src = "../Assets/Logo-SwiftUI.png" width="200" height="200">
 <p>
 Escolhemos o SwiftUI como Framework Frontend, pois este apresenta varias características positivas as quais nos chamou atenção como a facilidade de criar e manter um código limpo, a possibilidade de utilizarmos o live preview no desenvolvimento, para assim o agilizar, e por termos interesse em aproveitar recursos como Dark Mode, Dynamic Type e acessibilidade.
 
@@ -70,7 +70,7 @@ ___
 
 ### Xcode 
 <p align="center"> 
-<img src = "./Assets/Logo-XCode.png" width="200" height="200">
+<img src = "../Assets/Logo-XCode.png" width="200" height="200">
 <p>
 
 Decidirmos por usar a ferramenta Xcode como IDE de desenvolvimento pois este detém uma grande integração com o ambiente apple, dessa forma trabalhando de maneira fluída com seu sistema operacional, além de suporte nativo e otimizado para a lnguagem swift.
@@ -85,7 +85,7 @@ ___
 
 ### Kotlin
 <p align="center"> 
-<img src = "./Assets/Logo-Kotlin.png" width="200" height="200">
+<img src = "../Assets/Logo-Kotlin.png" width="200" height="200">
 <p>
 
 
@@ -103,7 +103,7 @@ Dentre os fatores que motivaram essa escolha, destacam-se:
 ---
 ### Jetpack Compose
 <p align="center"> 
-<img src = "./Assets/Logo-Jetpack-Compose.png" width="200" height="200">
+<img src = "../Assets/Logo-Jetpack-Compose.png" width="200" height="200">
 <p>
 
 Optamos pelo Jetpack Compose como framework frontend devido às suas diversas vantagens, que chamaram nossa atenção. Dentre elas, destacam-se a facilidade de escrever e manter um código mais enxuto e declarativo, a possibilidade de utilizar a pré-visualização em tempo real para acelerar o desenvolvimento e o suporte nativo a recursos como temas dinâmicos, acessibilidade e animações intuitivas.
@@ -113,7 +113,7 @@ Além disso, o Jetpack Compose permite uma maior flexibilidade na construção d
 ---
 ### Android Studio
 <p align="center"> 
-<img src = "./Assets/Logo-Android-Studio.png" width="200" height="200">
+<img src = "../Assets/Logo-Android-Studio.png" width="200" height="200">
 <p>
 
 Escolhemos o Android Studio como IDE de desenvolvimento devido à sua profunda integração com o ecossistema Android, proporcionando um fluxo de trabalho fluido e otimizado para a linguagem Kotlin. Além disso, a ferramenta conta com suporte nativo ao Jetpack Compose, facilitando a criação de interfaces modernas de maneira declarativa.

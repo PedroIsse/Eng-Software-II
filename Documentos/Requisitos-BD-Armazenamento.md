@@ -29,7 +29,9 @@ Pensando na arquitetura de um aplicativo como o UniRide, seria uma **arquitetura
 
 ### **Amazon RDS (Aurora):**
 
-![Amazon RDS](./Assets/amazon-rds.png)
+<p align="center"> 
+<img src = "../Assets/amazon-rds.png" width="500" height="200">
+<p>
 
 A ideia é utilizar serviços da AWS para que tenhamos a melhor performance do aplicativo, em quesitos como: **escalabilidade, disponibilidade e redunância, otimização de custos, segurança e conformidade, desempenho, agilidade e integração**. Uma vez que seria **mais custoso, desafiador e demorado** manter e criar um data center local para as operações. 
 
@@ -49,7 +51,9 @@ Portanto, a escolha de Banco de Dados Relacional ideal seria o **Amazon Aurora**
 
 ### **Amazon DynamoDB:**
 
-![Amazon DynamoDB](./Assets/dynamodb.png)
+<p align="center"> 
+<img src = "../Assets/dynamodb.png" width="500" height="200">
+<p>
 
 O **DynamoDB** é um banco de dados NoSQL totalmente gerido e altamente escalável. Ele é uma excelente escolha para armazenar dados dinâmicos e em tempo real, como localização de motoristas, status das corridas e eventos.
 
@@ -69,10 +73,10 @@ O **DynamoDB** é um banco de dados NoSQL totalmente gerido e altamente escaláv
 
 ### **S3 Intelligent-Tiering:**
 
-![S3 Intelligent Tiering](./Assets/s3-intelligent-tiering.jpg)
+<p align="center"> 
+<img src = "../Assets/s3-intelligent-tiering.jpg" width="500" height="200">
+<p>
 
 O armazenamento foi pensado, novamente, utilizando a AWS. Para isso, escolhemos o **S3 Intelligent-Tiering**, pois ele possui um sistema que move automaticamente os arquivos para diferentes camadas, levando em consideração a *frequência com que o objeto é acessado*. Dessa forma, reduzimos os custos de armazenamento, já que, quanto menos acessado um objeto for, mais barato será seu armazenamento. Além disso, a recuperação dos dados é imediata, garantindo que a performance não seja afetada.
 
 Objetos acessados com frequência incluem fotos de perfis de usuários, tanto motoristas quanto passageiros, além da foto do veículo utilizado para a carona. Já informações para **conformidade, segurança e auditoria** ficam armazenadas em camadas de acesso menos frequente. Isso inclui registros de logs das corridas e documentos do motorista, como *foto da CNH, CRLV, RG, entre outros*.
-
-## **Arquiteturas AWS:** 

@@ -4,7 +4,7 @@
 
 ### **Node.js**
 <p align="center"> 
-<img src = "./Assets/nodejs.png" width="200" height="200">
+<img src = "../Assets/nodejs.png" width="200" height="200">
 <p>
 
 
@@ -30,7 +30,7 @@ No seu caso, diferentes partes do sistema de caronas, como reservas, notificaç�
 
 ### **Java**
 <p align="center"> 
-<img src = "./Assets/java.png" width="200" height="200">
+<img src = "../Assets/java.png" width="200" height="200">
 <p>
 
 Robustez e Escalabilidade :
@@ -61,7 +61,7 @@ Isso oferece flexibilidade para rodar a aplicação em ambientes variados (nuvem
 
 ### **Python**
 <p align="center"> 
-<img src = "./Assets/python.png" width="200" height="200">
+<img src = "../Assets/python.png" width="200" height="200">
 <p>
 
 
@@ -93,7 +93,7 @@ criando uma rede de sistemas interconectados.
 
 ### **Express.js**
 <p align="center"> 
-<img src = "./Assets/expressjs.png" width="200" height="200">
+<img src = "../Assets/expressjs.png" width="200" height="200">
 <p>
 
 
@@ -108,7 +108,7 @@ O suporte a middlewares permite tratar as requisições de forma mais organizada
 
 ### **Spring Boot**
 <p align="center"> 
-<img src = "./Assets/springboot.png" width="200" height="200">
+<img src = "../Assets/springboot.png" width="200" height="200">
 <p>
 
 

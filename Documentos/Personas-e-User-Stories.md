@@ -3,7 +3,7 @@
 ## Usuário Motorista - Ricardo
 
 <p align="center"> 
-<img src = "./Assets/PERSONAS/Persona-Ricardo.png" width="960" height="540">
+<img src = "../Assets/PERSONAS/Persona-Ricardo.png" width="960" height="540">
 <p>
 
 ### User Story
@@ -13,7 +13,7 @@ Como João Ricardo, um estudante e motorista que busca otimizar seus deslocament
 ## Usuário Passageiro - Mariana
 
 <p align="center"> 
-<img src = "./Assets/PERSONAS/Persona-Mariana.png" width="960" height="540">
+<img src = "../Assets/PERSONAS/Persona-Mariana.png" width="960" height="540">
 <p>
 
 ### User Story

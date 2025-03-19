@@ -38,13 +38,13 @@ Optar pela AWS nos permite focar no crescimento do negócio e no aprimoramento d
 
 # **Público Alvo - Requisitos:**
 
-### [Persona e Users Stories](./Personas-e-User-Stories.md)
+### [Persona e Users Stories](./Documentos/Personas-e-User-Stories.md)
 
 ---
 
 # **Técnologias:**
 
-# [Frontend](./Requisitos-Frontend.md):
+### [Frontend](./Documentos/Requisitos-Frontend.md):
 
 ### 1. Android:
 - **Linguagem:** Kotlin (é oficialmente suportado pela Google para desenvolvimento Android)
@@ -64,7 +64,7 @@ Optar pela AWS nos permite focar no crescimento do negócio e no aprimoramento d
 
 ---
 
-# [Backend](./Requisitos-Backend.md):
+### [Backend](./Documentos/Requisitos-Backend.md):
 
 ### 1. Linguagens de Programação:
 - **Node.js**, **Java** e **Python**
@@ -77,7 +77,7 @@ Optar pela AWS nos permite focar no crescimento do negócio e no aprimoramento d
 
 ---
 
-# [Banco de Dados e Armazenamento](./Requisitos-BD-Arquitetura.md):
+### [Banco de Dados e Armazenamento](./Documentos/Requisitos-BD-Armazenamento.md):
 
 - **Arquitetura de Banco de Dados Híbrida:** Será utilizado banco de dados estruturados (SQL) e banco de dados não estruturados (NoSQL). A infraestutura do projeto é baseado na AWS, logo os serviços de banco de dados são da AWS, para banco de dados estruturados escolhemos o **Amazon Relational Database Service (RDS)** e para banco de dados não estruturados escolhemos o **Amazon DynamoDB**, além da possibilidade eventual de utilizar **ElastiCache e DAX** para memória em cache. 
 
@@ -85,7 +85,7 @@ Optar pela AWS nos permite focar no crescimento do negócio e no aprimoramento d
 
 ---
 
-# Mapeamento e Geolocalização:
+### Mapeamento e Geolocalização:
 
 - **Google Maps API:** Cálculos, roteamento, precisão
 - **Mapbox:** Personalização e Interface
@@ -93,17 +93,21 @@ Optar pela AWS nos permite focar no crescimento do negócio e no aprimoramento d
 
 ---
 
-# Pagamentos:
+### Pagamentos:
 
 - **APIs:** Mercado Pago, Pagar.me, PagSeguro, Stripe (Escolher conforme necessidade)
 
-# Segurança e Conformidade:
+---
+
+### Segurança e Conformidade:
 
 - **PCI DSS:** (Payment Card Industry Data Security Standard)
 - **LGPD:** (Lei Geral de Proteção de Dados)
 - **Anti-Fraude:** Implementação de sistemas para proteção contra fraudes financeiras.
 
-# Integrantes:
+---
+
+### Integrantes:
 
 - Pedro Isse de Souza | 0030482411006
 - Lauren Rodrigues Oliveira | 0030482411028
