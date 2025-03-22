@@ -330,6 +330,3 @@ Camila valoriza conforto e qualidade na experiência de viagem. Ela evita transp
 5. **Como passageiro, quero agendar caronas com antecedência e garantir um tempo de espera mínimo para otimizar meu deslocamento.**  
 
 ---
-
-Essa versão foca nos **passageiros**, abordando os temas: **preferências de usuário, sustentabilidade, preço justo, conforto e tempo de espera/agendamento**. 🚀  
-Se precisar de ajustes ou novos detalhes, me avise! 😃
