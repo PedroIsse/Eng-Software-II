@@ -30,12 +30,12 @@ Como Mariana Souza, uma estudante universitária que precisa se deslocar diariam
 
 - **Nome:** Gabriel Souza  
 - **Idade:** 29 anos  
-- **Profissão:** Engenheiro de Software e motorista de caronas  
-- **Onde vive:** Campinas, SP  
+- **Profissão:** Estudante de Análise e Desenvolvimento de Sistemas e motorista de caronas  
+- **Onde vive:** Sorocaba, SP  
 
 ### Mini biografia
 
-Gabriel trabalha como engenheiro de software e usa seu carro para ir ao trabalho diariamente. Ele percebeu que poderia compartilhar caronas para reduzir os custos com transporte e contribuir para a mobilidade sustentável. No entanto, ele valoriza um sistema que lhe permita definir preferências detalhadas, como horários, número de passageiros e até mesmo se deseja conversar durante a viagem. Ele também busca uma plataforma que respeite seu estilo de direção e ofereça segurança.
+Gabriel estudo análise e desenvolvimento de sistemas usa seu carro para ir para a faculdade diariamente. Ele percebeu que poderia compartilhar caronas para reduzir os custos com transporte e contribuir para a mobilidade sustentável. No entanto, ele valoriza um sistema que lhe permita definir preferências detalhadas, como horários, número de passageiros e até mesmo se deseja conversar durante a viagem. Ele também busca uma plataforma que respeite seu estilo de direção e ofereça segurança.
 
 ### Marcas que consome/admira:
 
@@ -75,7 +75,11 @@ Gabriel trabalha como engenheiro de software e usa seu carro para ir ao trabalho
 
 - Filtros para selecionar passageiros compatíveis 
 
-- Ferramentas de comunicação para alinhar detalhes antes da viagem  
+- Ferramentas de comunicação para alinhar detalhes antes da viagem 
+
+### **User Story**  
+
+**Como motorista, quero definir minhas preferências de viagem (horários, regras e número de passageiros) para garantir uma experiência confortável.** 
 
 ---
 
@@ -83,11 +87,11 @@ Gabriel trabalha como engenheiro de software e usa seu carro para ir ao trabalho
 
 - **Nome:** Marina Oliveira  
 - **Idade:** 24 anos  
-- **Profissão:** Estudante de Administração e motorista de caronas  
-- **Onde vive:** São Paulo, SP  
+- **Profissão:** Estudante de Projetos Mecânicos e motorista de caronas  
+- **Onde vive:** Sorocaba, SP  
 
 ### Mini biografia
-Marina estuda Administração e busca maneiras de otimizar seus custos com transporte. Ela usa aplicativos de carona, mas sente que as taxas cobradas pelos serviços tradicionais prejudicam sua renda. Para ela, um sistema justo é essencial, onde tanto motoristas quanto passageiros se beneficiem. Ela deseja uma plataforma transparente, com divisão justa dos custos e sem cobranças abusivas.
+Marina estuda Projetos Mecânicos e busca maneiras de otimizar seus custos com transporte. Ela usa aplicativos de carona, mas sente que as taxas cobradas pelos serviços tradicionais prejudicam sua renda. Para ela, um sistema justo é essencial, onde tanto motoristas quanto passageiros se beneficiem. Ela deseja uma plataforma transparente, com divisão justa dos custos e sem cobranças abusivas.
 
 ### Marcas que consome/admira:
 - Mercado Pago e Nubank (transparência nas taxas)  
@@ -114,16 +118,21 @@ Marina estuda Administração e busca maneiras de otimizar seus custos com trans
 - Pagamento direto e sem taxas abusivas  
 - Ferramenta para calcular os custos antes da viagem  
 
+### **User Story**  
+
+
+**Como motorista, quero visualizar o cálculo detalhado do valor da carona antes de aceitar passageiros para garantir um lucro justo.** 
+
 ---
 
 ### **Persona 3 - Ricardo Mendes (Rotas eficientes)**
 - **Nome:** Ricardo Mendes  
 - **Idade:** 27 anos  
-- **Profissão:** Analista de Dados e motorista de caronas  
-- **Onde vive:** Belo Horizonte, MG  
+- **Profissão:** Estudante de Análise e Desenvolvimento de Sistemas e motorista de caronas  
+- **Onde vive:** Sorocaba, SP
 
 ### Mini biografia
-Ricardo trabalha com dados e é apaixonado por otimização. Ele quer maximizar a eficiência das suas viagens, evitando desvios desnecessários e garantindo que o trajeto seja o mais rápido possível. Ele busca uma plataforma que otimize rotas automaticamente para que não precise gastar tempo ajustando manuais.
+Ricardo é estudante de Análise e Desenvolvimento de Sistemas e é apaixonado por otimização. Ele quer maximizar a eficiência das suas viagens, evitando desvios desnecessários e garantindo que o trajeto seja o mais rápido possível. Ele busca uma plataforma que otimize rotas automaticamente para que não precise gastar tempo ajustando manuais.
 
 ### Marcas que consome/admira:
 - Waze e Google Maps (precisão e otimização de trajetos)  
@@ -150,183 +159,183 @@ Ricardo trabalha com dados e é apaixonado por otimização. Ele quer maximizar 
 - Opção de limitar desvios antes de aceitar passageiros  
 - Interface que permita visualizar o tempo estimado com cada parada  
 
----
+### **User Story**  
 
-
-## User Stories - Motoristas
-
-1. **Como motorista, quero definir minhas preferências de viagem (horários, regras e número de passageiros) para garantir uma experiência confortável.**
-
-2. **Como motorista, quero visualizar o cálculo detalhado do valor da carona antes de aceitar passageiros para garantir um lucro justo.**  
-
-3. **Como motorista, quero que a rota seja otimizada automaticamente para minimizar desvios e economizar combustível.**  
-
-4. **Como passageiro, quero visualizar avaliações detalhadas dos motoristas antes de aceitar uma carona para me sentir mais seguro.** 
+**Como motorista, quero que a rota seja otimizada automaticamente para minimizar desvios e economizar combustível.**
 
 ---
 
 # **Personas e User Stories - Passageiros**
 
-## **Personas - Passageiros:**  
-
-### **Persona 1 - Lucas Almeida (Preferências do Usuário)**  
+## **Persona 1 - Lucas Almeida (Preferências do Usuário)**  
 
 - **Nome:** Lucas Almeida  
 - **Idade:** 21 anos  
-- **Profissão:** Estudante de Engenharia  
+- **Profissão:** Estudante de Análise e Desenvolvimento de Sistemas  
 - **Onde vive:** Campinas, SP  
 
-### Mini biografia  
+### **Mini biografia**  
+Lucas é um estudante metódico que gosta de planejar seus trajetos com antecedência e evitar desconfortos durante a viagem. Ele quer um sistema que permita selecionar motoristas e passageiros com base em preferências como silêncio, música e conversas.  
 
-Lucas é um estudante que usa caronas diariamente para ir à faculdade. Ele gosta de planejar seus trajetos com antecedência e prefere viajar com passageiros que tenham hábitos semelhantes aos seus. Quer um sistema que permita selecionar motoristas e passageiros com base em preferências como silêncio, música e conversas.  
+### **Expectativas não atendidas**  
+- Falta de personalização na escolha das caronas  
+- Dificuldade em encontrar motoristas compatíveis  
+- Pouca flexibilidade para configurar viagens recorrentes  
 
-### Marcas que consome/admira:  
-- Spotify e Apple Music (personalização)  
-- Google Agenda (organização)  
-- Airbnb (avaliações detalhadas)  
-
-### Expectativas não atendidas:  
-- Pouca personalização na escolha de caronas  
-- Falta de um sistema que indique compatibilidade de perfis  
-- Dificuldade em encontrar caronas recorrentes  
-
-### Medos e receios:  
+### **Medos e receios**  
 - Compartilhar viagem com passageiros ou motoristas incompatíveis  
 - Falta de flexibilidade no horário das caronas  
 - Falta de um sistema eficiente para reagendar viagens  
 
-### Objetivos:  
+### **Objetivos**  
 - Encontrar caronas que se adequem ao seu estilo de viagem  
 - Evitar desconfortos com motoristas/passageiros incompatíveis  
 - Garantir uma experiência agradável e previsível nas viagens  
 
-### Necessidades:  
+### **Necessidades**  
 - Filtros de preferências (música, conversa, temperatura, etc.)  
 - Possibilidade de favoritar motoristas e passageiros  
 - Opção de viagens recorrentes e programação antecipada  
 
+### **User Story**  
+**Como passageiro, quero definir minhas preferências de viagem (música, silêncio, conversa, temperatura) para garantir uma experiência confortável.**  
+
 ---
 
-### **Persona 2 - Fernanda Costa (Sustentabilidade)**  
+## **Persona 2 - Fernanda Costa (Sustentabilidade)**  
 
 - **Nome:** Fernanda Costa  
 - **Idade:** 23 anos  
-- **Profissão:** Estudante de Biologia  
+- **Profissão:** Estudante de Sistemas Biomédicos 
 - **Onde vive:** São Paulo, SP  
 
-### Mini biografia  
-
+### **Mini biografia**  
 Fernanda é apaixonada por sustentabilidade e busca alternativas ecológicas no dia a dia. O transporte público nem sempre atende às suas necessidades, e o uso de caronas compartilhadas seria uma solução mais sustentável para reduzir emissões de CO₂. Ela procura um aplicativo que incentive práticas ecológicas e ofereça recompensas para quem adota hábitos mais sustentáveis.  
 
-### Marcas que consome/admira:  
-- Natura e OMO (sustentabilidade)  
-- BlaBlaCar (transporte ecológico)  
-- Mercado Livre (logística verde)  
-
-### Expectativas não atendidas:  
+### **Expectativas não atendidas**  
 - Falta de incentivo a práticas sustentáveis em apps de transporte  
 - Poucas informações sobre impacto ambiental das viagens  
 - Falta de opções para otimizar ocupação dos carros  
 
-### Medos e receios:  
+### **Medos e receios**  
 - Falta de motoristas dispostos a compartilhar caronas ecológicas  
 - Serviços de transporte individual gerando mais poluição  
 - Falta de opções para reduzir pegada de carbono  
 
-### Objetivos:  
+### **Objetivos**  
 - Reduzir o impacto ambiental dos deslocamentos diários  
 - Ter incentivos para viajar de maneira mais ecológica  
 - Participar de uma comunidade de mobilidade sustentável  
 
-### Necessidades:  
+### **Necessidades**  
 - Sistema de recompensas para usuários ecológicos  
 - Opção de compartilhar caronas para aumentar ocupação dos carros  
 - Estatísticas sobre impacto ambiental de cada viagem  
 
+### **User Story**  
+**Como passageiro, quero que o sistema incentive práticas sustentáveis e compartilhe dados sobre impacto ambiental para contribuir com a mobilidade ecológica.**  
+
 ---
 
-### **Persona 3 - Thiago Martins (Preço Justo)**  
+## **Persona 3 - Thiago Martins (Preço Justo)**  
 
 - **Nome:** Thiago Martins  
 - **Idade:** 22 anos  
-- **Profissão:** Estudante de Ciências Contábeis  
-- **Onde vive:** Belo Horizonte, MG  
+- **Profissão:** Estudante de Projetos mecânicos  
+- **Onde vive:** Sorocaba, SP
 
-### Mini biografia  
-
+### **Mini biografia**  
 Thiago precisa economizar ao máximo, pois depende de um orçamento apertado para estudar. O transporte público nem sempre é confiável, e os apps tradicionais de transporte são muito caros. Ele quer uma opção mais acessível, transparente e sem tarifas abusivas.  
 
-### Marcas que consome/admira:  
-- Nubank e Inter (custo-benefício)  
-- Shopee e AliExpress (preços baixos)  
-- BlaBlaCar (transporte econômico)  
-
-### Expectativas não atendidas:  
+### **Expectativas não atendidas**  
 - Tarifas altas em horários de pico  
 - Falta de clareza no cálculo do valor da carona  
 - Poucas opções de compartilhamento para dividir custos  
 
-### Medos e receios:  
+### **Medos e receios**  
 - Gastar mais do que pode com transporte  
 - Apps escondendo taxas extras  
 - Não encontrar caronas disponíveis por preços acessíveis  
 
-### Objetivos:  
+### **Objetivos**  
 - Reduzir gastos com transporte sem comprometer a qualidade  
 - Ter previsibilidade de preços antes da viagem  
 - Garantir um custo-benefício real em cada carona  
 
-### Necessidades:  
+### **Necessidades**  
 - Tarifas acessíveis e transparentes  
 - Simulação de preços antes da confirmação da viagem  
 - Opção de dividir valores entre passageiros automaticamente  
 
+### **User Story**  
+**Como passageiro, quero visualizar o custo da viagem antes de aceitar para evitar surpresas no valor final.**  
+
 ---
 
-### **Persona 4 - Camila Rodrigues (Conforto)**  
+## **Persona 4 - Camila Rodrigues (Conforto)**  
 
 - **Nome:** Camila Rodrigues  
 - **Idade:** 20 anos  
-- **Profissão:** Estudante de Design  
-- **Onde vive:** Curitiba, PR  
+- **Profissão:** Estudante de Sistemas Biomédicos
+- **Onde vive:** Salto de Pirapora, SP 
 
-### Mini biografia  
-
+### **Mini biografia**  
 Camila valoriza conforto e qualidade na experiência de viagem. Ela evita transporte público devido à lotação e atrasos e quer garantir que suas caronas sejam agradáveis. Prefere viajar com conforto, sem preocupações com segurança ou desconfortos no trajeto.  
 
-### Marcas que consome/admira:  
-- iFood e Rappi (praticidade)  
-- Netflix (experiência premium)  
-- Uber Comfort (qualidade no transporte)  
-
-### Expectativas não atendidas:  
+### **Expectativas não atendidas**  
 - Falta de categorias diferenciadas para maior conforto  
 - Dificuldade em selecionar motoristas que ofereçam boas condições de viagem  
 - Pouca atenção a detalhes como temperatura e espaço no carro  
 
-### Medos e receios:  
+### **Medos e receios**  
 - Pegar caronas desconfortáveis e mal planejadas  
 - Falta de controle sobre condições do carro e do trajeto  
 - Viagens longas em ambientes desagradáveis  
 
-### Objetivos:  
+### **Objetivos**  
 - Garantir conforto e qualidade em suas viagens  
 - Ter mais controle sobre os detalhes da experiência de transporte  
 - Conseguir caronas que atendam suas expectativas de bem-estar  
 
-### Necessidades:  
+### **Necessidades**  
 - Opção de escolher níveis de conforto na viagem  
 - Verificação de motoristas que oferecem melhores condições  
 - Sistema de avaliações detalhado sobre a experiência da viagem  
 
----
-
-## **User Stories - Passageiros**  
-
-1. **Como passageiro, quero definir minhas preferências de viagem (música, silêncio, conversa, temperatura) para garantir uma experiência confortável.**  
-2. **Como passageiro, quero que o sistema incentive práticas sustentáveis e compartilhe dados sobre impacto ambiental para contribuir com a mobilidade ecológica.**  
-3. **Como passageiro, quero visualizar o custo da viagem antes de aceitar para evitar surpresas no valor final.**  
-4. **Como passageiro, quero opções de conforto e verificar avaliações de motoristas para garantir uma experiência de alta qualidade.**  
-5. **Como passageiro, quero agendar caronas com antecedência e garantir um tempo de espera mínimo para otimizar meu deslocamento.**  
+### **User Story**  
+**Como passageiro, quero opções de conforto e verificar avaliações de motoristas para garantir uma experiência de alta qualidade.**  
 
 ---
+
+## **Persona 5 - Rafael Lima (Tempo de Espera / Agendamento)**  
+
+- **Nome:** Rafael Lima  
+- **Idade:** 24 anos  
+- **Profissão:** Estudante de Análise e Desenvolvimento de Sistemas
+- **Onde vive:** Mairinque, SP
+
+### **Mini biografia**  
+Rafael tem uma rotina corrida entre estágio e faculdade. Ele precisa de um transporte confiável e previsível para não chegar atrasado. Quer um sistema que permita agendar caronas antecipadamente e minimizar o tempo de espera.  
+
+### **Expectativas não atendidas**  
+- Falta de opção para agendamento antecipado  
+- Longos tempos de espera sem garantia de carona disponível  
+- Dificuldade em encontrar motoristas que sigam horários fixos  
+
+### **Medos e receios**  
+- Chegar atrasado por falta de carona disponível  
+- Não conseguir um transporte confiável em horários críticos  
+- Aplicativos que não garantem pontualidade nas viagens  
+
+### **Objetivos**  
+- Garantir que suas caronas sejam pontuais  
+- Reduzir ao máximo o tempo de espera  
+- Ter previsibilidade no transporte diário  
+
+### **Necessidades**  
+- Sistema de agendamento antecipado de caronas  
+- Prioridade para passageiros frequentes  
+- Notificações e lembretes sobre a carona agendada  
+
+### **User Story**  
+**Como passageiro, quero agendar caronas com antecedência e garantir um tempo de espera mínimo para otimizar meu deslocamento.**  
