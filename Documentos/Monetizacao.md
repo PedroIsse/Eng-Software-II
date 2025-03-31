@@ -45,58 +45,137 @@ O público alvo do UniRide são os estudantes, mais especificamente, dois tipos 
 
 ### **Custo estimado para o usuário:**
 
-Analisando.
+Vamos realizar um exemplo para explicar essa situação:
 
-### **Estratégia de precificação:**
+Um motorista do UniRide, em suas preferências decide que irá dar a carona apenas para usuários num raio de 20 km de si. Baseado na preferências de outros usuários, ele encontra 3 passageiros para a viagem. Baseado na localização em que cada um estava o total da viagem até a faculdade foi de 20km.
 
-Analisando.
+- **Motorista:** Ponto 1: 0 km
+
+- **Pessoa A:** Ponto 2: 7.5 km
+
+- **Pessoa B:** Ponto 3: 5 km  
+
+- **Pessoa C:** Ponto 4: 6 km
+
+- **Faculdade:** Ponto 5: 1.5 km 
+
+**Precificação:**
+
+- **Consumo médio do carro:** 10 km/L
+
+- **Preço médio do combustível:** R$ 6.00 Litro
+
+- **Lucro/Compensação para o motorista:** R$ 10.00
+
+**Gasto na viagem:**
+
+- **Combustível:** 20 km / 10 km/L = 2 Litros
+
+- **Custo do combustível:** 2 L x R$ 6.00 = R$ 12.00
+
+**Divisão de Custos:**
+
+- **Total da corrida:** R$ 12.00 + R$ 10.00 = R$ 22.00
+
+- **Passageiros:** R4 22.00 / 3 = R$ 7.33 p/ passageiro
 
 ### **Comparação com concorrentes:**
 
-- **Concorrentes Diretos:**
+- **Concorrente Direto:**
 
-    - **BlaBlaCar:** Plataforma de caronas intermunicipais e urbanas, permitindo que motoristas ofereçam assentos em seus veículos por um valor compartilhado.
-
-    - **Bynd:** Plataforma corporativa de caronas, voltada para empresas e universidades, permitindo que funcionários e estudantes compartilhem viagens.
+    - **BlaBlaCar:** O UniRide se diferencia do BlaBlaCar ao focar em deslocamentos curtos e acadêmicos, enquanto o BlaBlaCar é voltado para viagens intermunicipais de longa distância. Além disso, o UniRide conecta apenas estudantes, criando um ambiente mais seguro e comunitário, enquanto no BlaBlaCar, motoristas e passageiros podem ser completamente desconhecidos.
 
 - **Concorrentes *Indiretos*:**
 
-    - **Uber:**
+    - **Uber e 99:** Diferente de Uber e 99, que cobram tarifas dinâmicas e funcionam como serviços comerciais, o UniRide é um sistema de compartilhamento de custos entre estudantes. Isso faz com que seja uma opção mais econômica para quem busca uma alternativa ao transporte privado sem pagar altos valores por cada corrida.
 
-        - **Uber Juntos / UberX Share:** Serviço de transporte privado, incluindo a opção de compartilhamento de viagens entre passageiros com rotas próximas.
+        - **Uber Juntos / UberX Share e 99 Compartilhada:** Embora o UberX Share e o 99 Compartilhada ofereçam viagens compartilhadas, eles incluem passageiros desconhecidos e podem fazer múltiplas paradas, aumentando o tempo de deslocamento. Já o UniRide conecta apenas estudantes da mesma instituição, proporcionando mais segurança e previsibilidade na rota.
 
-    - **99:**
+    - **InDrive:** O inDrive permite que passageiros negociem o preço da corrida diretamente com motoristas, enquanto o UniRide tem um modelo mais previsível, onde o custo é dividido entre os estudantes, permitindo que o motorista seja compensado de forma justa. Isso torna o UniRide uma opção mais acessível e transparente para universitários que buscam economia, sem a necessidade de negociar o preço.
 
-        - **99 Compartilhada:** Serviço semelhante ao Uber, incluindo corridas compartilhadas para baratear o custo.
-
-    - **InDrive:** Permite que passageiros negociem o preço da corrida diretamente com os motoristas.
-
-    - **Transporte público e semelhantes:** Esses concorrentes oferecem alternativas acessíveis para os estudantes, com foco em transporte coletivo ou soluções de mobilidade pública, entretanto, nem sempre de maneira confortável.
+    - **Transporte público e semelhantes:** O UniRide oferece mais conforto e flexibilidade do que o transporte público, permitindo que estudantes cheguem à faculdade de forma mais rápida e segura. No entanto, o transporte público ainda é a opção mais barata, mesmo que nem sempre seja eficiente ou confortável, especialmente em horários de pico.
 
 ## **Viabilidade Financeira:**
 
 ### **Custos fixos mensais:**
 
-Analisando.
+- **Infraestrutura (servidores, nuvem, etc.):** Vamos considerar que a plataforma UniRide vai exigir servidores para a hospedagem do app, banco de dados, integração com API de pagamentos, entre outros. Para um serviço local, como Sorocaba, podemos estimar um custo médio mensal de R$ 3.000 para servidores e infraestrutura na AWS, considerando o uso de serviços como DynamoDB, S3, Lambda e RDS.
+
+- **Equipe de Suporte e Desenvolvimento:** Para um projeto em fase inicial, podemos estimar que serão necessárias algumas pessoas, como desenvolvedores, gerentes de comunidade e suporte ao cliente. Supondo uma equipe pequena de 3 pessoas com um custo médio de R$ 5.000 cada, isso resulta em R$ 15.000 mensais.
+
+- **Marketing e Aquisição de Usuários:** Inicialmente, será necessário investir em marketing digital, eventos e promoções para atrair usuários, além de parcerias com faculdades. Um custo razoável para isso pode ser de R$ 3.000 mensais.
+
+- **Custo de Comissões (Plataforma Marketplace):** Como a plataforma reterá uma comissão por cada viagem, esse custo pode ser variável. Suponhamos que a comissão seja de 10% sobre o valor da corrida, com um custo médio de R$ 2,00 por corrida. Se estimarmos 5.000 corridas mensais, o custo com comissões seria de R$ 10.000.
+
+- **Total de custos fixos mensais estimados:**
+
+    ```
+    R$ 3.000 (infraestrutura) + R$ 15.000 (equipe) + R$ 3.000 (marketing) + R$ 10.000 (comissões) = R$ 31.000
+    ```
 
 ### **Custos variáveis por usuário:**
 
-Analisando.
+- **Custos de pagamento e transações:** Vamos supor que a plataforma paga taxas de processamento de pagamento (cartões de crédito, por exemplo). Uma taxa comum pode ser de 2% a 4% sobre o valor da transação. Vamos usar uma estimativa de 3% sobre o valor pago por corrida.
+
+    ```
+    Valor médio por corrida (R$ 7,33) × 3% = R$ 0,22 por transação.
+    ```
+
+- **Custo de manutenção do app (suporte a usuários):** Para cada usuário ativo (passageiro ou motorista), vamos estimar um custo de R$ 1,00 por mês, considerando o custo de manter a plataforma funcional e o suporte técnico.
+
+    ```
+    Custo variável por usuário estimado:
+    R$ 0,22 (taxa de transação) + R$ 1,00 (manutenção) = R$ 1,22 por usuário por mês.
+    ```
 
 ### **Ponto de equilíbrio:**
 
-Analisando.
+O ponto de equilíbrio é alcançado quando a receita total iguala os custos totais. Vamos usar a seguinte fórmula para calcular o ponto de equilíbrio:
+
+```
+Ponto de Equilíbrio = Custos Mensais / Lucro Médio Por Usuário
+```
+
+Onde o lucro médio por usuário é a receita gerada por cada passageiro, descontando os custos variáveis.
+
+**Receita média por usuário (mensal):**
+    Cada passageiro paga em média R$ 7,33 por viagem. Se ele realizar 5 viagens por mês (que é relativamente baixo, pensando em contexto de acadêmico), isso dá R$ 36,65 por mês.
+
+**Lucro médio por usuário (mensal):**
+```
+Receita média por usuário (R$ 36,65) - custo variável (R$ 1,22) = R$ 35,43 por usuário.
+```
+
+**Ponto de equilíbrio:**
+
+```
+Ponto de Equilíbrio: 31000 / 35.43 = 875
+```
+
+Ou seja, o UniRide precisará de aproximadamente 875 usuários ativos (passageiros) para cobrir os custos fixos e variáveis mensais. Mas em um contexto mais adequado, seria interessante 1000 usuários ativos mensalmente, é possível, levando em consideração o número de estudantes universitários em faculdades de sorocaba.
 
 ### **Estimativa de faturamento (Primeiro Ano):**
 
-Analisando.
+Multiplicando o faturamento mensal pela quantidade de meses no ano:
+
+```
+Faturamento Anual: (Usuários Ativos * Faturamento Mensal de Usuário) * 12
+
+Faturamento Anual: (1000 * 35.43) * 12 = R$ 425160,00
+```
 
 ## **Escalabilidade e Retenção:**
 
 ### **Como o modelo de monetização pode crescer junto com a base de usuários?**
 
-Analisando.
+Como visto anteriormente, a monetização do UniRide depende do número de estudantes dispostos a oferecer caronas para outros alunos próximos. Quanto mais motoristas cadastrados, maior será o número de corridas realizadas, especialmente considerando que existem cerca de 20 faculdades na cidade de Sorocaba.
+
+Com base nisso, a receita pode ser impulsionada por meio da ampliação das assinaturas Premium, trazendo novas vantagens e aprimorando os benefícios já existentes. Além disso, embora a quantidade de anúncios permaneça a mesma, o aumento da base de usuários resultaria em um maior número de visualizações, gerando mais receita publicitária.
+
+O crescimento da plataforma também tornaria o UniRide mais atrativo para instituições de ensino, que poderiam se interessar em firmar parcerias ou se filiar ao serviço. Além disso, a plataforma poderia adotar um modelo híbrido, permitindo tanto motoristas assinantes quanto motoristas no modelo marketplace (onde uma porcentagem do valor da corrida ficaria com o UniRide). Essa abordagem possibilitaria avaliar qual modelo apresenta melhor desempenho nos primeiros meses de operação.
 
 ### **Quais estratégias serão usadas para retenção?**
 
-Analisando.
+Os assinantes Premium, como mencionado anteriormente, terão a possibilidade de fechar planos com um motorista — desde que este esteja de acordo — para períodos mensais, semestrais ou anuais. Os planos contarão com descontos variáveis, sendo menor para pagamentos parciais à vista, maior para pagamentos à vista integralmente e inexistente para pagamentos parcelados. Além disso, caso o motorista do plano tenha algum imprevisto, o passageiro poderá receber descontos em corridas alternativas, sem que isso afete o segundo motorista envolvido.
+
+Enquanto isso, usuários gratuitos receberão incentivos para aderirem ao plano Premium, como cupons de desconto após completarem um determinado número de corridas. Já para os motoristas, o modelo híbrido proporciona maior flexibilidade, permitindo que escolham entre o sistema de assinatura ou o modelo marketplace, onde uma taxa é aplicada sobre cada corrida. Além disso, os alunos de faculdades filiadas ao UniRide poderão contar com benefícios exclusivos, tornando a experiência ainda mais vantajosa.
