@@ -40,6 +40,8 @@ Optar pela AWS nos permite focar no crescimento do negócio e no aprimoramento d
 
 ### [Persona e Users Stories](./Documentos/Personas-e-User-Stories.md)
 
+### [Monetização](./Documentos/Monetizacao.md)
+
 ---
 
 # **Técnologias:**
