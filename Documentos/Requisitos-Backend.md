@@ -56,13 +56,13 @@ O Spring Boot, juntamente com o Spring Cloud, fornece um ecossistema completo pa
 ## Integração com Spring Cloud
 O Spring Cloud permite que a aplicação utilize recursos avançados de microsserviços, como:
 
-Discovery Service (Eureka): Facilita a descoberta automática de serviços.
+1. Discovery Service (Eureka): Facilita a descoberta automática de serviços.
 
-Config Server: Centraliza a configuração dos microsserviços.
+2. Config Server: Centraliza a configuração dos microsserviços.
 
-Circuit Breaker (Resilience4J): Garante resiliência ao sistema, evitando falhas em cascata.
+3. Circuit Breaker (Resilience4J): Garante resiliência ao sistema, evitando falhas em cascata.
 
-API Gateway (Spring Cloud Gateway): Gerencia e protege o tráfego entre microsserviços.
+4. API Gateway (Spring Cloud Gateway): Gerencia e protege o tráfego entre microsserviços.
 
 ## Segurança Aprimorada com Spring Security
 Spring Security é um dos frameworks mais utilizados para garantir autenticação e autorização em aplicações Java.
@@ -79,11 +79,11 @@ Ele fornece endpoints prontos para exibir informações do sistema, como uso de 
 ## Banco de Dados e Persistência com Spring Data
 Spring Data simplifica a comunicação com bancos de dados relacionais e não relacionais, utilizando bibliotecas como:
 
-Spring Data JPA: Facilita a integração com bancos de dados SQL (PostgreSQL, MySQL, etc.).
+1. Spring Data JPA: Facilita a integração com bancos de dados SQL (PostgreSQL, MySQL, etc.).
 
-Spring Data MongoDB: Suporte para banco de dados NoSQL.
+2. Spring Data MongoDB: Suporte para banco de dados NoSQL.
 
-Hibernate: Framework ORM para manipulação eficiente de entidades.
+3. Hibernate: Framework ORM para manipulação eficiente de entidades.
 
 ## Execução e Deploy em Ambientes Cloud
 Spring Boot é altamente compatível com serviços em nuvem, permitindo deploy fácil em plataformas como AWS, Google Cloud e Microsoft Azure.
@@ -91,7 +91,7 @@ Ele também suporta conteinerização com Docker e orquestração com Kubernetes
 
 ---
 
-### **Considerações Finais**
+# **Considerações Finais**
 
 A escolha do Java e do Spring Boot para o backend do UniRide se baseia na necessidade de uma plataforma robusta, segura e escalável.
 Java fornece um ambiente confiável para o desenvolvimento, enquanto o Spring Boot facilita a implementação de microsserviços, integrações com bancos de dados e monitoramento da aplicação.
