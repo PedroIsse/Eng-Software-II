@@ -1,8 +1,8 @@
 # **Personas:**
 
-![Gabriel](../Assets/PERSONAS/gabriel.png)
-![lucas](../Assets/PERSONAS/lucas.png)
-![marina](../Assets/PERSONAS/marina.png)
+![Gabriel](../Assets/PERSONAS/Gabriel.png)
+![lucas](../Assets/PERSONAS/Lucas.png)
+![marina](../Assets/PERSONAS/Marina.png)
 ![juliana](../Assets/PERSONAS/juliana.png)
 
 # **Users Stories:**
