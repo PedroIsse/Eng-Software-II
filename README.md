@@ -109,6 +109,10 @@ Optar pela AWS nos permite focar no crescimento do negócio e no aprimoramento d
 
 ---
 
+### Link do Vídeo: Entrega Parcial
+
+[UniRide - Eng. Software II](https://youtu.be/IkfgUq0SA7M)
+
 ### Integrantes:
 
 - Pedro Isse de Souza | 0030482411006
