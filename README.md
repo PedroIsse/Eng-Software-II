@@ -87,6 +87,14 @@ Optar pela AWS nos permite focar no crescimento do negócio e no aprimoramento d
 
 ---
 
+### Diagramas:
+
+#### Diagrama de Entidade-Relacionameto:
+
+![Diagrama Entidade-Relacionamento](./Assets/DiagramaEntidadeRelacionamento.png)
+
+---
+
 ### Mapeamento e Geolocalização:
 
 - **Google Maps API:** Cálculos, roteamento, precisão
