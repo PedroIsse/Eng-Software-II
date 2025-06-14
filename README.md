@@ -93,6 +93,11 @@ Optar pela AWS nos permite focar no crescimento do negócio e no aprimoramento d
 
 ![Diagrama Entidade-Relacionamento](./Assets/DiagramaEntidadeRelacionamento.png)
 
+
+#### Diagrama Conceitual:
+![Diagrama Conceitual](./Assets/DiagramaClasses.png)
+
+
 ---
 
 ### Mapeamento e Geolocalização:
