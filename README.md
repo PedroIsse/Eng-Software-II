@@ -49,21 +49,13 @@ Optar pela AWS nos permite focar no crescimento do negócio e no aprimoramento d
 ### [Frontend](./Documentos/Requisitos-Frontend.md):
 
 ### 1. Android:
-- **Linguagem:** Kotlin (é oficialmente suportado pela Google para desenvolvimento Android)
+- **Linguagem:** JavaScript 
 - **Framework:** Jetpack Compose (Kotlin)
 - **Ferramentas:** Android Studio (Ambiente integrado para desenvolver para o sistema Android)
 
-### 2. iOS:
-- **Linguagem:** Swift
-- **Framework:** SwiftUI 
-- **Ferramentas:** Xcode
-
-### 3. Web:
+### 2. Web:
 - **Linguagem:** JavaScript e TypeScript
 - **Frameworks:** React.js
-
-**Errata:** Em caso de necessidade de ser lançado rapidamente em ambas as plataformas (iOS e Android), é possível utilizar um único código-base, como **React Native (JavaScript/TypeScript)** ou **Flutter (Dart).**
-
 ---
 
 ### [Backend](./Documentos/Requisitos-Backend.md):
