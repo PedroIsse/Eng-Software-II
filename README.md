@@ -95,7 +95,7 @@ Optar pela AWS nos permite focar no crescimento do negócio e no aprimoramento d
 
 
 #### Diagrama Conceitual:
-![Diagrama Conceitual](./Assets/DiagramaClasses.png)
+![Diagrama Conceitual](./Assets/DiagramaDeClasses.png)
 
 
 ---
