@@ -69,13 +69,13 @@ Optar pela AWS nos permite focar no crescimento do negócio e no aprimoramento d
 ### [Backend](./Documentos/Requisitos-Backend.md):
 
 ### 1. Linguagens de Programação:
-- **Node.js**, **Java** e **Python**
+- **Java** 
 
 ### 2. Frameworks:
-- **Express.js** e **Spring Boot**
+- **Spring Boot**
 
 ### 3. Arquitetura:
-- **APIs REST** e **Microsserviços**
+- **Microsserviços**
 
 ---
 
