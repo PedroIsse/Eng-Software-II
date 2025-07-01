@@ -114,15 +114,25 @@ Optar pela AWS nos permite focar no crescimento do negócio e no aprimoramento d
 
 ---
 
-### Link do Protótipo: Entrega Parcial
+### Documento Final - Resumo Projeto
 
-[Protótipo UniRide](https://www.canva.com/design/DAGknZsKRDI/zfcBEAYSNckWgAhQa9itaQ/edit?utm_content=DAGknZsKRDI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+[Documentação Final - Resumo do Projeto](./Documentos/DocumentoFinal-ResumoUniRide.pdf)
 
 ---
 
-### Link do Vídeo: Entrega Parcial
+### Link do Protótipo:
 
-[UniRide - Eng. Software II](https://youtu.be/IkfgUq0SA7M)
+**Entrega Parcial:** [Protótipo UniRide](https://www.canva.com/design/DAGknZsKRDI/zfcBEAYSNckWgAhQa9itaQ/edit?utm_content=DAGknZsKRDI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+
+**Entrega Final:** [Protótipo UniRide Final](https://www.canva.com/design/DAGknZsKRDI/zfcBEAYSNckWgAhQa9itaQ/edit?utm_content=DAGknZsKRDI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+
+---
+
+### Link do Vídeo: 
+
+**Entrega Parcial:** [UniRide - Eng. Software II](https://youtu.be/IkfgUq0SA7M)
+
+**Entrega Final:** [UniRide - Eng. Software II - Final](https://youtu.be/gkH7qrToob0)
 
 ---
 
