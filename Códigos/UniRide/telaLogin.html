@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página de Login</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
 </head>
+
 <body>
 
     <main class="container">
@@ -19,26 +23,53 @@
                 <label for="email">Email</label>
                 <input type="email" id="email" placeholder="Digite seu email" required>
 
-                <label for="senha">Senha</label>
-                <input type="password" id="senha" placeholder="Digite sua senha" required>
+                <div class="input-group">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" placeholder="Digite sua senha" required>
+                    <i id="toggleSenha" class="ri-eye-close-line"></i>
+                </div>
 
                 <div class="check-area">
                     <input type="checkbox" id="conectado">
                     <label for="conectado">Continuar conectado</label>
                 </div>
-            
-            </form>    
 
-                <a href="#" class="btn">Entrar</a>
+            </form>
 
-            
+            <a href="#" class="btn">Entrar</a>
 
-                <div class="links-recuperacao">
-                    <a href="#" class="cadastro">Esqueci minha senha.</a>
-                    <p>Não possui uma conta? <a href="telaCadastroPassageiro.html" class="cadastro">Cadastre-se.</a></p>
-                </div>
+
+
+            <div class="links-recuperacao">
+                <a href="#" class="cadastro">Esqueci minha senha.</a>
+                <p>Não possui uma conta? <a href="telaCadastroPassageiro.html" class="cadastro">Cadastre-se.</a></p>
+            </div>
+
+            <script>
+                const senha = document.getElementById("senha");
+                const toggle = document.getElementById("toggleSenha");
+
+                toggle.addEventListener("click", () => {
+                    if (senha.type === "password") {
+                        senha.type = "text";
+                        toggle.classList.remove("ri-eye-close-line");
+                        toggle.classList.add("ri-eye-line");
+                    } else {
+                        senha.type = "password";
+                        toggle.classList.remove("ri-eye-line");
+                        toggle.classList.add("ri-eye-close-line");
+                    }
+                });
+            </script>
 
         </section>
+
+
+
     </main>
 </body>
+
 </html>
+
+<!-- <i class="ri-eye-close-line"></i> 
+ link para o olho fechado que vamo usar dps-->

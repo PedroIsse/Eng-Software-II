@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -13,39 +15,51 @@
     <div class="container">
 
         <section class="login-box">
+
+            <div class="btn-voltar">
+                <i class="ri-arrow-left-line" onclick="history.back()" style="cursor: pointer;"></i>
+            </div>
+
             <div class="box-titulo">
                 <h1 class="titulo">Informações de cadastro</h2>
             </div>
             <form class="upload-container form-login">
+                <h2>Dados do passageiro</h2>
 
                 <label>Nome</label>
-                <input type="text">
+                <input type="text" id="Nome" placeholder="Digite seu nome">
 
                 <label>Sobrenome</label>
-                <input type="text">
+                <input type="text" id="Sobrenome" placeholder="Digite seu sobrenome">
 
                 <label>E-mail</label>
-                <input type="email">
+                <input type="email" id="email" placeholder="Digite seu email" required>
 
-                <label>Senha</label>
-                <input type="password">
+                <div class="input-group">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha1" placeholder="Digite sua senha" required>
+                    <i id="toggleSenha1" class="ri-eye-close-line"></i>
+                </div>
 
-                <label>Repita sua senha</label>
-                <input type="password">
+                <div class="input-group">
+                    <label for="senha">Repita sua senha</label>
+                    <input type="password" id="senha2" placeholder="Repita sua senha" required>
+                    <i id="toggleSenha2" class="ri-eye-close-line"></i>
+                </div>
 
                 <label>Data de Nascimento</label>
-                <input type="text">
+                <input type="text" placeholder="DD/MM/AAAA">
 
                 <label>CPF</label>
-                <input type="text">
+                <input type="text" placeholder="000.000.000-00">
 
                 <label>Telefone</label>
-                <input type="text">
+                <input type="text" placeholder="(00)00000-0000">
 
             </form>
 
             <div class="upload-container box">
-                <label>Foto de Perfil</label>
+                <h2>Foto de perfil</h2>
                 <img src="avatar.png" alt="Avatar" class="upload-img">
 
                 <form>
@@ -55,9 +69,9 @@
             </div>
 
             <div class="upload-container box">
-                <label>Comprovante de Matrícula</label>
+                <h2>Comprovante de Matrícula</h2>
                 <img src="comprovante.png" alt="Comprovante" class="upload-img">
-                
+
 
                 <form>
                     <input type="file" id="fileUpload" accept="image/*" hidden>
@@ -65,12 +79,30 @@
                 </form>
             </div>
 
-            
-           <a href="telaCadastroPassageiro2.html" class="btn">Próximo passo</a>
-            
-            
 
+            <a href="telaCadastroPassageiro2.html" class="btn">Próximo passo</a>
 
+            <script>
+                function togglePassword(senhaId, toggleId) {
+                    const campo = document.getElementById(senhaId);
+                    const icone = document.getElementById(toggleId);
+
+                    icone.addEventListener("click", () => {
+                        if (campo.type === "password") {
+                            campo.type = "text";
+                            icone.classList.remove("ri-eye-close-line");
+                            icone.classList.add("ri-eye-line");
+                        } else {
+                            campo.type = "password";
+                            icone.classList.remove("ri-eye-line");
+                            icone.classList.add("ri-eye-close-line");
+                        }
+                    });
+                }
+
+                togglePassword("senha1", "toggleSenha1");
+                togglePassword("senha2", "toggleSenha2");
+            </script>
 
         </section>
 

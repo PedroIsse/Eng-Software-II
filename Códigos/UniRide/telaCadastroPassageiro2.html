@@ -1,47 +1,85 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
 </head>
+
 <body>
     <main class="container">
         <section class="login-box">
+
+            <div class="btn-voltar">
+                <i class="ri-arrow-left-line" onclick="history.back()" style="cursor: pointer;"></i>
+            </div>
+            
             <div class="box-titulo">
+
                 <h1 class="titulo">Informações de cadastro</h2>
+
             </div>
             <form class="upload-container form-login">
-                
+                <h2>Endereço</h2>
                 <label>Rua</label>
-                <input type="text">
+                <input type="text" class="maiusculo">
 
                 <label>Número</label>
                 <input type="text">
 
                 <label>Complemento (opcional)</label>
-                <input type="text">
+                <input type="text" class="maiusculo">
             </form>
             <form class="upload-container form-login">
+                <h2>Dados do cartão</h2>
                 <label>Número do cartao</label>
-                <input type="text">
+                <input type="text" placeholder="0000 0000 0000 0000">
 
                 <label>Validade</label>
-                <input type="text">
+                <input type="text" placeholder="MM/AA">
 
                 <label>Código de segurança</label>
-                <input type="text">
+                <input type="text" placeholder="CVV">
 
                 <label>Nome do titular</label>
-                <input type="text">
+                <input type="text" class="maiusculo">
 
             </form>
-            <div class="btns">
-                <a href="#" class="btn">Pular</a>
-                <a href="#" class="btn">Próximo passo</a>
+            <div class="btn-group">
+                <a href="#" class="btns upload">Pular</a>
+                <a href="#" id="openPopup" class="btns upload">Finalizar</a>
             </div>
-        </section>    
+
+            <div id="popup" class="popup">
+                <div class="popup-content">
+                    <h2>Gostaria de se cadastrar como motorista?</h2>
+
+                    <div class="btn-group">
+                        <a id="closePopup" class="btns upload">Não</a>
+                        <a href="#" class="btns upload">Sim</a>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                // Abrir popup
+                document.getElementById("openPopup").onclick = function (e) {
+                    e.preventDefault(); // impede ir para #
+                    document.getElementById("popup").style.display = "flex";
+                }
+
+                // Fechar popup
+                document.getElementById("closePopup").onclick = function () {
+                    document.getElementById("popup").style.display = "none";
+                }
+            </script>
+
+        </section>
     </main>
 </body>
+
 </html>
