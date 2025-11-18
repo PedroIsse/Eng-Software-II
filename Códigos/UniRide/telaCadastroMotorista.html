@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentação do Motorista</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+
+        <section class="Cadastro-CNH">
+
+            <div class="btn-voltar">
+                <i class="ri-arrow-left-line" onclick="history.back()" style="cursor: pointer;"></i>
+            </div>
+
+            <div class="box-titulo">
+                <h1 class="titulo">Documentação do Motorista</h2>
+            </div>
+
+            <div class="upload-container box">
+                <h2>CNH com EAR (Exerce atividade Remunerada)</h2>
+                <img src="CNH.png" alt="CNH" class="upload-img">
+
+                <form>
+                    <input type="file" id="fileUpload" accept="image/*" hidden>
+                    <label for="fileUpload" class="btn upload">Enviar imagem</label>
+                </form>
+            </div>
+
+            <div class="upload-container box">
+                <h2>Documento do Veículo </h2>
+                <img src="Documento-Veiculo.png" alt="Documento-Veiculo" class="upload-img">
+
+
+                <form>
+                    <input type="file" id="fileUpload" accept="image/*" hidden>
+                    <label for="fileUpload" class="btn upload">Enviar comprovante</label>
+                </form>
+            </div>
+
+             <div class="upload-container box">
+                <h2>Seguro do Veículo</h2>
+                <img src="Seguro-Veiculo.png" alt="Seguro-Veiculo" class="upload-img">
+
+
+                <form>
+                    <input type="file" id="fileUpload" accept="image/*" hidden>
+                    <label for="fileUpload" class="btn upload">Enviar comprovante</label>
+                </form>
+            </div>
+
+            <div class="upload-container box">
+                <h2>Selfie com CNH:</h2>
+                <img src="selfie-cnh.png" alt="selfie-cnh" class="upload-img">
+
+
+                <form>
+                    <input type="file" id="fileUpload" accept="image/*" hidden>
+                    <label for="fileUpload" class="btn upload">Enviar comprovante</label>
+                </form>
+            </div>
+
+            <div class="btn-group">
+                <a href="TelaPrincipal.html" id="openPopup" class="btns upload">Finalizar</a>
+            </div>
+    </div>
+    </section>
+</body>
+
+</html>
