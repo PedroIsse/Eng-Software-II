@@ -5,27 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página Motoristas</title>
     <link rel="stylesheet" href="style.css">
-    <!-- REMIX ICONS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v7.4.0/ol.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
 </head>
 <body>
 
-    <!-- TOPO -->
-    <header class="top-bar">
-        <div class="search-box">
-            <input type="text" placeholder="Buscar Motoristas">
-            <i class="ri-search-line"></i>
 
+    <header class="top-bar"> 
+        <input type="text" placeholder="Buscar Motoristas">
+        <div class="menu-item">
+            <i class="ri-search-line"></i>
         </div>
     </header>
 
-    <!-- MAPA -->
+
     <section class="map">
-        <img src="https://i.imgur.com/yrOQX4X.jpeg" alt="mapa">
-        <!-- substitua pela imagem do seu mapa -->
+        <div id="map"></div>
     </section>
 
-    <!-- MENU INFERIOR -->
     <footer class="bottom-menu">
         <div class="menu-item">
             <i class="ri-discuss-fill"></i>
@@ -44,6 +41,28 @@
             <span>Meu Perfil</span>
         </div>
     </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/ol@v7.4.0/dist/ol.js"></script>
+
+    <script>
+
+        const map = new ol.Map({
+            target: 'map',
+
+            layers: [
+                new ol.layer.Tile({
+                    source: new ol.source.OSM()
+                })
+            ],
+
+            view: new ol.View({
+                center: ol.proj.fromLonLat([-47.425833,  -23.482500]),
+
+                zoom: 17
+            })
+        });
+    </script>
 
 </body>
 </html>
