@@ -1,68 +1,153 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">Rua Adoniran Barbosa
     <title>Página Motoristas</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v7.4.0/ol.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+
 </head>
+
 <body>
 
-
-    <header class="top-bar"> 
-        <input type="text" placeholder="Buscar Motoristas">
-        <div class="menu-item">
-            <i class="ri-search-line"></i>
+    <header class="top-bar">
+        <div class="search-box">
+            <i class="ri-search-line" id="searchBtn"></i>
+            <input type="text" id="searchInput" placeholder="Rua São José, 120">
         </div>
     </header>
-
 
     <section class="map">
         <div id="map"></div>
     </section>
 
     <footer class="bottom-menu">
+        <div class="menu-item"><i class="ri-discuss-fill"></i><span>Comunidade</span></div>
+        <div class="menu-item active"><i class="ri-steering-2-fill"></i><span>Oferecer</span></div>
+        <div class="menu-item"><i class="ri-car-fill"></i><span>Solicitar</span></div>
         <div class="menu-item">
-            <i class="ri-discuss-fill"></i>
-            <span>Comunidade</span>
-        </div>
-        <div class="menu-item active">
-            <i class="ri-steering-2-fill"></i>
-            <span>Oferecer</span>
-        </div>
-        <div class="menu-item">
-            <i class="ri-car-fill"></i>
-            <span>Solicitar</span>
-        </div>
-        <div class="menu-item">
-            <i class="ri-user-fill"></i>
+            <a href="telaMeuPerfil.html"><i class="ri-user-fill"></i></a>
             <span>Meu Perfil</span>
         </div>
     </footer>
 
-
+    <!-- OpenLayers -->
     <script src="https://cdn.jsdelivr.net/npm/ol@v7.4.0/dist/ol.js"></script>
 
     <script>
+        const LOCATIONIQ_KEY = "pk.f8b960416f38b6f9f963fa31b83e43d7";
 
         const map = new ol.Map({
             target: 'map',
-
-            layers: [
-                new ol.layer.Tile({
-                    source: new ol.source.OSM()
-                })
-            ],
-
+            layers: [new ol.layer.Tile({ source: new ol.source.OSM() })],
             view: new ol.View({
-                center: ol.proj.fromLonLat([-47.425833,  -23.482500]),
-
-                zoom: 17
+                center: ol.proj.fromLonLat([-47.425833, -23.482500]),
+                zoom: 15
             })
+        });
+
+        // PIN
+        let pinOverlay = new ol.Overlay({
+            element: document.createElement("img"),
+            positioning: "bottom-center",
+            stopEvent: false
+        });
+        map.addOverlay(pinOverlay);
+
+        pinOverlay.getElement().src = "./images/pin.svg";
+        pinOverlay.getElement().style.width = "50px";
+        pinOverlay.getElement().style.height = "50px";
+
+        const VIEWBOX_SOROCABA = "-47.5600,-23.4300,-47.3300,-23.6200";
+
+        function normalizeText(text) {
+            return text.normalize("NFD")
+                .replace(/[\u0300-\u036f]/g, "")
+                .replace(/\bR\b|\bR\.\b/gi, "Rua")
+                .replace(/\bAv\b|\bAv\.\b/gi, "Avenida")
+                .replace(/\bRod\b|\bRod\.\b/gi, "Rodovia");
+        }
+
+        async function fetchJSON(url, headers = {}) {
+            const response = await fetch(url, { headers });
+            return response.json();
+        }
+
+        async function searchLocation() {
+            let input = document.getElementById("searchInput").value.trim();
+            if (!input) return;
+
+            input = normalizeText(input);
+
+            // Detecta número
+            const regex = /(.*?)[,\s]+(\d+)$/;
+            const match = input.match(regex);
+
+            let rua = input;
+            let numero = null;
+
+            if (match) {
+                rua = match[1].trim();
+                numero = match[2].trim();
+            }
+
+            console.log("Rua:", rua, "Número:", numero);
+
+            //LocationIQ
+            const url1 = `https://us1.locationiq.com/v1/search.php?key=${LOCATIONIQ_KEY}&q=${encodeURIComponent(input + ", Sorocaba")}&format=json&addressdetails=1&limit=1`;
+
+            try {
+                const r1 = await fetchJSON(url1, { "Referer": "https://meusite.com" });
+                if (r1 && r1[0]) return moveMap(r1[0].lat, r1[0].lon);
+            } catch (e) {
+                console.warn("Erro LocationIQ:", e);
+            }
+
+            //Nominatim = pesquisa por rua e numero
+            if (numero) {
+                const url2 = `https://nominatim.openstreetmap.org/search?
+            format=json&addressdetails=1&bounded=1&limit=1
+            &viewbox=${VIEWBOX_SOROCABA}
+            &street=${encodeURIComponent(numero + " " + rua)}
+            &city=Sorocaba&countrycodes=br`.replace(/\s+/g, "");
+
+                const r2 = await fetchJSON(url2);
+                if (r2.length > 0) return moveMap(r2[0].lat, r2[0].lon);
+            }
+
+            //
+            // Nominatim — pesquisa somente por rua
+            //
+            const url3 = `https://nominatim.openstreetmap.org/search?
+        format=json&addressdetails=1&bounded=1&limit=1
+        &viewbox=${VIEWBOX_SOROCABA}
+        &street=${encodeURIComponent(rua)}
+        &city=Sorocaba&countrycodes=br`.replace(/\s+/g, "");
+
+            alert("Endereço não encontrado.");
+        }
+
+        function moveMap(lat, lon) {
+            const coords = ol.proj.fromLonLat([parseFloat(lon), parseFloat(lat)]);
+
+            map.getView().animate({
+                center: coords,
+                zoom: 19,
+                duration: 900
+            });
+
+            pinOverlay.setPosition(coords);
+        }
+
+        document.getElementById("searchBtn").addEventListener("click", searchLocation);
+        document.getElementById("searchInput").addEventListener("keydown", (e) => {
+            if (e.key === "Enter") searchLocation();
         });
     </script>
 
 </body>
+
 </html>
