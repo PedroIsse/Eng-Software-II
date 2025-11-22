@@ -5,14 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página Motoristas</title>
+
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v7.4.0/ol.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
-
 </head>
 
 <body>
 
+    <!-- TOP BAR -->
     <header class="top-bar">
         <div class="search-box">
             <i class="ri-search-line" id="searchBtn"></i>
@@ -20,69 +21,177 @@
         </div>
     </header>
 
+    <!-- MAPA -->
     <section class="map">
         <div id="map"></div>
     </section>
 
+    <!-- MENU INFERIOR -->
     <footer class="bottom-menu">
-        <div class="menu-item"><i class="ri-discuss-fill"></i><span>Comunidade</span></div>
-        <div class="menu-item active"><i class="ri-steering-2-fill"></i><span>Oferecer</span></div>
-        <div class="menu-item"><i class="ri-car-fill"></i><span>Solicitar</span></div>
         <div class="menu-item">
-            <a href="telaMeuPerfil.html"><i class="ri-user-fill"></i></a>
+            <i class="ri-discuss-fill"></i>
+            <span>Comunidade</span>
+        </div>
+
+        <div class="menu-item">
+            <i class="ri-steering-2-fill"></i>
+            <span>Oferecer</span>
+        </div>
+
+        <div class="menu-item">
+            <i class="ri-car-fill"></i>
+            <span>Solicitar</span>
+        </div>
+
+        <div class="menu-item" id="btnPerfilAbrir">
+            <i class="ri-user-fill"></i>
             <span>Meu Perfil</span>
         </div>
     </footer>
+
+    <!-- PAINEL PERFIL -->
+    <div id="perfilOverlay"></div>
+
+    <div class="backgroud" id="perfilPanel">
+        <div class="container">
+
+            <section class="login-box">
+
+                <div class="btn-voltar">
+                    <i class="ri-arrow-left-line" id="closePerfil"></i>
+                </div>
+
+                <div class="box-titulo">
+                    <h1 class="titulo">Meu Perfil</h1>
+                </div>
+
+                <!-- DADOS DO USUÁRIO -->
+                <form class="upload-container form-login">
+
+                    <h2>Dados do Usuário</h2>
+
+                    <label>Nome</label>
+                    <input type="text" id="Nome" disabled>
+
+                    <label>Sobrenome</label>
+                    <input type="text" id="Sobrenome" disabled>
+
+                    <label>E-mail</label>
+                    <input type="email" id="email" disabled>
+
+                    <label>Data de Nascimento</label>
+                    <input type="text" disabled>
+
+                    <label>Telefone</label>
+                    <input type="text" disabled>
+                </form>
+
+                <!-- SOBRE VOCÊ -->
+                <form class="upload-container form-login">
+                    <label>Sobre Você</label>
+                    <textarea maxlength="450" class="sobreVoce" id="sobreVoce"></textarea>
+                </form>
+
+                <!-- PREFERÊNCIAS -->
+                <form class="upload-container form-login">
+                    <label>Preferências</label>
+                    <ul id="listaPreferencias" class="lista-preferencias"></ul>
+                    <div class="preferencias-input">
+                        <input type="text" id="inputPreferencia" placeholder="Digite uma preferência">
+                        
+                    </div>
+                    <i id="btnAddPreferencia" class="btn">Adicionar</i>
+
+                    
+                </form>
+
+            </section>
+        </div>
+    </div>
 
     <!-- OpenLayers -->
     <script src="https://cdn.jsdelivr.net/npm/ol@v7.4.0/dist/ol.js"></script>
 
     <script>
+
+        /* ---------------- MAPA ---------------- */
+
         const LOCATIONIQ_KEY = "pk.f8b960416f38b6f9f963fa31b83e43d7";
 
         const map = new ol.Map({
-            target: 'map',
-            layers: [new ol.layer.Tile({ source: new ol.source.OSM() })],
+            target: "map",
+            layers: [
+                new ol.layer.Tile({
+                    source: new ol.source.OSM()
+                })
+            ],
             view: new ol.View({
-                center: ol.proj.fromLonLat([-47.425833, -23.482500]),
+                center: ol.proj.fromLonLat([-47.425833, -23.482500]), // fallback padrão
                 zoom: 15
             })
         });
 
-        // PIN
-        let pinOverlay = new ol.Overlay({
-            element: document.createElement("img"),
+        // Criar marcador (mas NÃO colocar posição inicial)
+        let pin = document.createElement("img");
+        pin.src = "./images/pin.svg";
+        pin.style.width = "50px";
+        pin.style.height = "50px";
+
+        const pinOverlay = new ol.Overlay({
+            element: pin,
             positioning: "bottom-center",
             stopEvent: false
         });
+
         map.addOverlay(pinOverlay);
 
-        pinOverlay.getElement().src = "./images/pin.svg";
-        pinOverlay.getElement().style.width = "50px";
-        pinOverlay.getElement().style.height = "50px";
+        // Geolocalização automática do navegador
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(
+                (pos) => {
+                    const lat = pos.coords.latitude;
+                    const lon = pos.coords.longitude;
+
+                    const userCoords = ol.proj.fromLonLat([lon, lat]);
+
+                    map.getView().setCenter(userCoords);
+                    map.getView().setZoom(17);
+
+                    pinOverlay.setPosition(userCoords);
+                },
+                (err) => {
+                    console.warn("Usuário negou geolocalização ou ocorreu erro.");
+                },
+                {
+                    enableHighAccuracy: true,  // 🔹 pede o GPS real
+                    timeout: 15000,            // 🔹 tempo máximo para pegar a posição
+                    maximumAge: 0              // 🔹 não usar posição antiga em cache
+                }
+            );
+        }
 
         const VIEWBOX_SOROCABA = "-47.5600,-23.4300,-47.3300,-23.6200";
 
-        function normalizeText(text) {
-            return text.normalize("NFD")
+        function normalizeText(txt) {
+            return txt.normalize("NFD")
                 .replace(/[\u0300-\u036f]/g, "")
                 .replace(/\bR\b|\bR\.\b/gi, "Rua")
                 .replace(/\bAv\b|\bAv\.\b/gi, "Avenida")
                 .replace(/\bRod\b|\bRod\.\b/gi, "Rodovia");
         }
 
-        async function fetchJSON(url, headers = {}) {
-            const response = await fetch(url, { headers });
-            return response.json();
+        async function fetchJSON(url) {
+            const r = await fetch(url);
+            return r.json();
         }
 
         async function searchLocation() {
+
             let input = document.getElementById("searchInput").value.trim();
             if (!input) return;
 
             input = normalizeText(input);
 
-            // Detecta número
             const regex = /(.*?)[,\s]+(\d+)$/;
             const match = input.match(regex);
 
@@ -94,38 +203,25 @@
                 numero = match[2].trim();
             }
 
-            console.log("Rua:", rua, "Número:", numero);
-
-            //LocationIQ
             const url1 = `https://us1.locationiq.com/v1/search.php?key=${LOCATIONIQ_KEY}&q=${encodeURIComponent(input + ", Sorocaba")}&format=json&addressdetails=1&limit=1`;
 
             try {
-                const r1 = await fetchJSON(url1, { "Referer": "https://meusite.com" });
-                if (r1 && r1[0]) return moveMap(r1[0].lat, r1[0].lon);
+                const r1 = await fetchJSON(url1);
+                if (r1 && r1[0]) {
+                    return moveMap(r1[0].lat, r1[0].lon);
+                }
             } catch (e) {
-                console.warn("Erro LocationIQ:", e);
+                console.warn("LocationIQ falhou:", e);
             }
 
-            //Nominatim = pesquisa por rua e numero
             if (numero) {
-                const url2 = `https://nominatim.openstreetmap.org/search?
-            format=json&addressdetails=1&bounded=1&limit=1
-            &viewbox=${VIEWBOX_SOROCABA}
-            &street=${encodeURIComponent(numero + " " + rua)}
-            &city=Sorocaba&countrycodes=br`.replace(/\s+/g, "");
+                const url2 = `https://nominatim.openstreetmap.org/search?format=json&addressdetails=1&bounded=1&limit=1&viewbox=${VIEWBOX_SOROCABA}&street=${encodeURIComponent(numero + " " + rua)}&city=Sorocaba&countrycodes=br`;
 
                 const r2 = await fetchJSON(url2);
-                if (r2.length > 0) return moveMap(r2[0].lat, r2[0].lon);
+                if (r2.length > 0) {
+                    return moveMap(r2[0].lat, r2[0].lon);
+                }
             }
-
-            //
-            // Nominatim — pesquisa somente por rua
-            //
-            const url3 = `https://nominatim.openstreetmap.org/search?
-        format=json&addressdetails=1&bounded=1&limit=1
-        &viewbox=${VIEWBOX_SOROCABA}
-        &street=${encodeURIComponent(rua)}
-        &city=Sorocaba&countrycodes=br`.replace(/\s+/g, "");
 
             alert("Endereço não encontrado.");
         }
@@ -143,9 +239,50 @@
         }
 
         document.getElementById("searchBtn").addEventListener("click", searchLocation);
+
         document.getElementById("searchInput").addEventListener("keydown", (e) => {
             if (e.key === "Enter") searchLocation();
         });
+
+        /* ---------------- PAINEL PERFIL ---------------- */
+
+        const panel = document.getElementById("perfilPanel");
+        const overlay = document.getElementById("perfilOverlay");
+        const btnPerfil = document.getElementById("btnPerfilAbrir");
+        const closePerfil = document.getElementById("closePerfil");
+
+        function abrirPerfil() {
+            overlay.style.display = "block";
+            panel.style.bottom = "0";
+            document.body.classList.add("no-scroll");
+        }
+
+        function fecharPerfil() {
+            overlay.style.display = "none";
+            panel.style.bottom = "-100%";
+            document.body.classList.remove("no-scroll");
+        }
+
+        btnPerfil.addEventListener("click", abrirPerfil);
+        closePerfil.addEventListener("click", fecharPerfil);
+        overlay.addEventListener("click", fecharPerfil);
+
+        /* ---------------- LISTA DE PREFERÊNCIAS ---------------- */
+
+        const lista = document.getElementById("listaPreferencias");
+        const input = document.getElementById("inputPreferencia");
+        const btnAdd = document.getElementById("btnAddPreferencia");
+
+        btnAdd.addEventListener("click", () => {
+            if (!input.value.trim()) return;
+
+            const li = document.createElement("li");
+            li.textContent = input.value.trim();
+
+            lista.appendChild(li);
+            input.value = "";
+        });
+
     </script>
 
 </body>
