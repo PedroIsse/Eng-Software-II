@@ -60,22 +60,19 @@
 
             <div class="upload-container box">
                 <h2>Foto de perfil</h2>
-                <img src="avatar.png" alt="Avatar" class="upload-img">
-
+                <img src="images/adicionar-imagem.svg" class="upload-img" id="preview-fotoPerfil" height="80px">
                 <form>
-                    <input type="file" id="fileUpload" accept="image/*" hidden>
-                    <label for="fileUpload" class="btn upload">Enviar imagem</label>
+                    <input type="file" id="file-fotoPerfil" accept="image/*" hidden>
+                    <label for="file-fotoPerfil" class="btn upload">Enviar imagem</label>
                 </form>
             </div>
 
             <div class="upload-container box">
                 <h2>Comprovante de Matrícula</h2>
-                <img src="comprovante.png" alt="Comprovante" class="upload-img">
-
-
+                <img src="images/adicionar-imagem.svg" class="upload-img" id="preview-matricula" height="80px">
                 <form>
-                    <input type="file" id="fileUpload" accept="image/*" hidden>
-                    <label for="fileUpload" class="btn upload">Enviar comprovante</label>
+                    <input type="file" id="file-matricula" accept="image/*" hidden>
+                    <label for="file-matricula" class="btn upload">Enviar comprovante</label>
                 </form>
             </div>
 
@@ -102,6 +99,22 @@
 
                 togglePassword("senha1", "toggleSenha1");
                 togglePassword("senha2", "toggleSenha2");
+                function configurarPreview(inputId, imgId) {
+                    const input = document.getElementById(inputId);
+                    const img = document.getElementById(imgId);
+
+
+                    input.addEventListener("change", () => {
+                        const arquivo = input.files[0];
+                        if (arquivo) {
+                            img.src = URL.createObjectURL(arquivo);
+                        }
+                    });
+                }
+
+
+                configurarPreview("file-fotoPerfil", "preview-fotoPerfil");
+                configurarPreview("file-matricula", "preview-matricula");
             </script>
 
         </section>

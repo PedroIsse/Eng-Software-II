@@ -458,7 +458,7 @@ a {
     display: flex;
     flex-direction: row;
     gap: 10px;
-    
+
 }
 
 .lista-preferencias {
@@ -466,5 +466,16 @@ a {
     margin-right: auto;
     margin-top: 10px;
     margin-bottom: 15px;
-    
+
+}
+
+.upload-img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 14px;
+    margin: 10px 0 25px 0;
+    background: #ffffff20;
+    padding: 5px;
 }

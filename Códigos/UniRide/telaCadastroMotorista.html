@@ -24,52 +24,62 @@
 
             <div class="upload-container box">
                 <h2>CNH com EAR (Exerce atividade Remunerada)</h2>
-                <img src="CNH.png" alt="CNH" class="upload-img">
-
+                <img src="images/adicionar-imagem.svg" class="upload-img" id="preview-cnh" height="80px">
                 <form>
-                    <input type="file" id="fileUpload" accept="image/*" hidden>
-                    <label for="fileUpload" class="btn upload">Enviar imagem</label>
+                    <input type="file" id="file-cnh" accept="image/*" hidden>
+                    <label for="file-cnh" class="btn upload">Enviar imagem</label>
                 </form>
             </div>
 
             <div class="upload-container box">
-                <h2>Documento do Veículo </h2>
-                <img src="Documento-Veiculo.png" alt="Documento-Veiculo" class="upload-img">
-
-
+                <h2>Documento do Veículo</h2>
+                <img src="images/adicionar-imagem.svg" class="upload-img" id="preview-docCarro" height="80px">
                 <form>
-                    <input type="file" id="fileUpload" accept="image/*" hidden>
-                    <label for="fileUpload" class="btn upload">Enviar comprovante</label>
+                    <input type="file" id="file-docCarro" accept="image/*" hidden>
+                    <label for="file-docCarro" class="btn upload">Enviar comprovante</label>
                 </form>
             </div>
-
-             <div class="upload-container box">
-                <h2>Seguro do Veículo</h2>
-                <img src="Seguro-Veiculo.png" alt="Seguro-Veiculo" class="upload-img">
-
-
-                <form>
-                    <input type="file" id="fileUpload" accept="image/*" hidden>
-                    <label for="fileUpload" class="btn upload">Enviar comprovante</label>
-                </form>
-            </div>
+                <div class="upload-container box">
+                    <h2>Seguro do Veículo</h2>
+                    <img src="images/adicionar-imagem.svg" class="upload-img" id="preview-seguro" height="80px">
+                    <form>
+                        <input type="file" id="file-seguro" accept="image/*" hidden>
+                        <label for="file-seguro" class="btn upload">Enviar comprovante</label>
+                    </form>
+                </div>
 
             <div class="upload-container box">
                 <h2>Selfie com CNH:</h2>
-                <img src="selfie-cnh.png" alt="selfie-cnh" class="upload-img">
-
-
+                <img src="images/adicionar-imagem.svg" class="upload-img" id="preview-selfie" height="80px">
                 <form>
-                    <input type="file" id="fileUpload" accept="image/*" hidden>
-                    <label for="fileUpload" class="btn upload">Enviar comprovante</label>
+                    <input type="file" id="file-selfie" accept="image/*" hidden>
+                    <label for="file-selfie" class="btn upload">Enviar comprovante</label>
                 </form>
             </div>
 
             <div class="btn-group">
                 <a href="telaPrincipal.html" id="openPopup" class="btns upload">Finalizar</a>
             </div>
-    </div>
+        </div>
     </section>
+    <script>
+        function configurarPreview(inputId, imgId) {
+            const input = document.getElementById(inputId);
+            const img = document.getElementById(imgId);
+
+
+            input.addEventListener("change", () => {
+                const arquivo = input.files[0];
+                if (arquivo) {
+                    img.src = URL.createObjectURL(arquivo);
+                }
+            });
+        }
+        configurarPreview("file-cnh", "preview-cnh");
+        configurarPreview("file-docCarro", "preview-docCarro");
+        configurarPreview("file-seguro", "preview-seguro");
+        configurarPreview("file-selfie", "preview-selfie");
+    </script>
 </body>
 
 </html>
