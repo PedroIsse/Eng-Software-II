@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Motoristas</title>
+    <title>Home</title>
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v7.4.0/ol.css">
@@ -259,7 +259,7 @@
 
         onAuthStateChanged(auth, (user) => {
             if (!user) {
-                location.href = "telaLogin.html";
+                location.href = "index.html";
             }
         });
 
@@ -467,7 +467,7 @@
 
         document.getElementById("btnLogout").onclick = async () => {
             await signOut(auth);
-            location.href = "telaLogin.html";
+            location.href = "index.html";
         };
 
     </script>
