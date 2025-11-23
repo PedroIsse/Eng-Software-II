@@ -8,10 +8,8 @@
     <title>Cadastro Passageiro - Passo 1</title>
     <link rel="stylesheet" href="style.css">
 
-    <!-- CSS DO REMIXICON -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     
-    <!-- CSS DO CROPPER.JS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.css" />
     
 </head>
@@ -86,7 +84,6 @@
 
     </div>
 
-    <!-- MODAL DE RECORTE -->
     <div id="modalCrop" class="modal-crop">
         <h3 style="color:white; margin-bottom: 10px;">Ajuste sua foto</h3>
         <div class="crop-container">
@@ -98,12 +95,10 @@
         </div>
     </div>
 
-    <!-- JS DO CROPPER -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.js"></script>
 
 
     <script>
-        //MÁSCARAS DE INPUT
         
         const cpfInput = document.getElementById('cpf');
         cpfInput.addEventListener('input', (e) => {
@@ -119,7 +114,7 @@
             e.target.value = value;
         });
 
-        // Máscara Telefone: (00) 00000-0000
+        // Máscara Telefone
         const phoneInput = document.getElementById('telefone');
         phoneInput.addEventListener('input', (e) => {
             let value = e.target.value.replace(/\D/g, "");
@@ -175,7 +170,7 @@
         const inputFoto = document.getElementById("file-fotoPerfil");
         const previewFoto = document.getElementById("preview-fotoPerfil");
 
-        // 1. Selecionar foto e abrir Crop
+        // Selecionar foto e abrir Crop
         inputFoto.addEventListener("change", (e) => {
             const file = e.target.files[0];
             if (file) {
@@ -196,14 +191,14 @@
             }
         });
 
-        // 2. Cancelar Crop
+        // Cancelar Crop
         document.getElementById("btnCancelarCrop").onclick = () => {
             modalCrop.style.display = "none";
             inputFoto.value = "";
             if (cropper) cropper.destroy();
         };
 
-        // 3. Confirmar Crop
+        // Confirmar Crop
         document.getElementById("btnConfirmarCrop").onclick = () => {
             if (!cropper) return;
 
