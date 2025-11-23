@@ -15,7 +15,7 @@
         <section class="login-box">
 
             <div class="btn-voltar">
-                <i class="ri-arrow-left-line" onclick="history.back()" style="cursor: pointer;"></i>
+                <a href="telaCadastroPassageiro.html" class="ri-arrow-left-line"></a>
             </div>
 
             <div class="box-titulo">
@@ -51,7 +51,7 @@
             </form>
             <div class="btn-group">
                 <a href="telaLogin.html" id="openPopupPular" class="btns upload">Pular</a>
-                <a href="telaLogin.html" id="openPopup" class="btns upload">Finalizar</a>
+                <a href="telaLogin.html" id="btnFinalizarCadastro" class="btns upload">Finalizar</a>
             </div>
 
             <div id="popup" class="popup">
@@ -106,6 +106,50 @@
 
         </section>
     </main>
+
+<script type="module">
+
+import { db, auth } from "./js/firebase.js";
+import { doc, updateDoc, getDoc } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-firestore.js";
+
+async function salvarPasso2() {
+    const uid = auth.currentUser?.uid;
+    if (!uid) {
+        alert("Usuário não autenticado. Faça login.");
+        return;
+    }
+
+    const rua = document.querySelector("input[placeholder='Rua']").value || "";
+    const numero = document.querySelector("input[placeholder='Número']").value || "";
+    const complemento = document.querySelector("input[placeholder='Complemento (opcional)']").value || "";
+
+    const numeroCartao = document.querySelector("input[placeholder='0000 0000 0000 0000']").value || "";
+    const validade = document.querySelector("input[placeholder='MM/AA']").value || "";
+    const cvv = document.querySelector("input[placeholder='CVV']").value || "";
+    const nomeTitular = document.querySelector("input[placeholder='Nome do titular']").value || "";
+
+    try {
+        await updateDoc(doc(db, "passageiros", uid), {
+            endereco: { rua, numero, complemento },
+            cartao: { numero: numeroCartao, validade, cvv, nomeTitular },
+            updatedAt: new Date().toISOString()
+        });
+        // open existing popup
+        document.getElementById("popupPular")?.style.display = "flex";
+    } catch (err) {
+        console.error(err);
+        alert("Erro ao salvar: " + (err.message || err));
+    }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    const btn = document.getElementById("btnFinalizarCadastro");
+    if (btn) btn.addEventListener("click", (e) => { e.preventDefault(); salvarPasso2(); });
+
+    // keep existing popup handlers if present
+});
+
+</script>
 </body>
 
 </html>

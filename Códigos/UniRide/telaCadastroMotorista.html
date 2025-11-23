@@ -15,7 +15,7 @@
         <section class="Cadastro-CNH">
 
             <div class="btn-voltar">
-                <i class="ri-arrow-left-line" onclick="history.back()" style="cursor: pointer;"></i>
+                <a href="telaCadastroPassageiro2.html" class="ri-arrow-left-line"></a>
             </div>
 
             <div class="box-titulo">
@@ -103,6 +103,73 @@
         }
 
     </script>
+
+<script type="module">
+
+import { db, auth, storage } from "./js/firebase.js";
+import { ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-storage.js";
+import { doc, setDoc } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-firestore.js";
+
+async function salvarArquivo(refe, arquivo) {
+    await uploadBytes(refe, arquivo);
+    return await getDownloadURL(refe);
+}
+
+async function finalizarCadastroMotorista() {
+    const uid = auth.currentUser?.uid;
+    if (!uid) {
+        alert("Usuário não autenticado.");
+        return;
+    }
+
+    const cnhFile = document.getElementById("file-cnh").files[0];
+    const docCarroFile = document.getElementById("file-docCarro").files[0];
+    const seguroFile = document.getElementById("file-seguro").files[0];
+    const selfieFile = document.getElementById("file-selfie").files[0];
+
+    try {
+        const cnhURL = cnhFile ? await salvarArquivo(ref(storage, `motoristas/${uid}/cnh.jpg`), cnhFile) : "";
+        const docCarroURL = docCarroFile ? await salvarArquivo(ref(storage, `motoristas/${uid}/docCarro.jpg`), docCarroFile) : "";
+        const seguroURL = seguroFile ? await salvarArquivo(ref(storage, `motoristas/${uid}/seguro.jpg`), seguroFile) : "";
+        const selfieURL = selfieFile ? await salvarArquivo(ref(storage, `motoristas/${uid}/selfie.jpg`), selfieFile) : "";
+
+        await setDoc(doc(db, "motoristas", uid), {
+            cnhURL, docCarroURL, seguroURL, selfieURL,
+            updatedAt: new Date().toISOString()
+        });
+
+        // show existing popup
+        document.getElementById("popupPular")?.style.display = "flex";
+    } catch (err) {
+        console.error(err);
+        alert("Erro ao enviar documentos: " + (err.message || err));
+    }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    const btn = document.getElementById("openPopupPular");
+    if (btn) btn.addEventListener("click", (e) => { e.preventDefault(); finalizarCadastroMotorista(); });
+    // preview handlers
+    const setupPreview = (inputId, imgId) => {
+        const input = document.getElementById(inputId);
+        const img = document.getElementById(imgId);
+        if (!input || !img) return;
+        input.addEventListener("change", () => {
+            const arquivo = input.files[0];
+            if (arquivo) {
+                img.src = URL.createObjectURL(arquivo);
+            } else {
+                img.src = "images/adicionar-imagem.svg";
+            }
+        });
+    };
+    setupPreview("file-cnh","preview-cnh");
+    setupPreview("file-docCarro","preview-docCarro");
+    setupPreview("file-seguro","preview-seguro");
+    setupPreview("file-selfie","preview-selfie");
+});
+
+</script>
 </body>
 
 </html>

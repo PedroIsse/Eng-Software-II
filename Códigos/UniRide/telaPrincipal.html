@@ -285,6 +285,75 @@
 
     </script>
 
+
+<script type="module">
+
+import { db, auth } from "./js/firebase.js";
+import { doc, getDoc, updateDoc } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-firestore.js";
+
+async function carregarPerfil() {
+    const uid = auth.currentUser?.uid;
+    if (!uid) return;
+    try {
+        const snap = await getDoc(doc(db, "passageiros", uid));
+        if (!snap.exists()) return;
+        const dados = snap.data();
+        document.getElementById("Nome").value = dados.nome || "";
+        document.getElementById("Sobrenome").value = dados.sobrenome || "";
+        document.getElementById("email").value = dados.email || "";
+        document.querySelector("input[placeholder='Data de Nascimento']")?.setAttribute("value", dados.dataNascimento || "");
+        document.querySelector("input[placeholder='Telefone']")?.setAttribute("value", dados.telefone || "");
+        document.getElementById("sobreVoce").value = dados.sobreVoce || "";
+
+        const lista = document.getElementById("listaPreferencias");
+        lista.innerHTML = "";
+        (dados.preferencias || []).forEach(p => {
+            const li = document.createElement("li");
+            li.textContent = p;
+            lista.appendChild(li);
+        });
+
+        // profile photo if exists
+        if (dados.fotoPerfilURL) {
+            let img = document.getElementById("perfilFoto");
+            if (!img) {
+                // insert image at top of panel
+                const titleBox = document.querySelector("#perfilPanel .box-titulo");
+                img = document.createElement("img");
+                img.id = "perfilFoto";
+                img.style.width = "90px";
+                img.style.height = "90px";
+                img.style.borderRadius = "50%";
+                img.style.objectFit = "cover";
+                img.style.marginBottom = "12px";
+                titleBox.appendChild(img);
+            }
+            document.getElementById("perfilFoto").src = dados.fotoPerfilURL;
+        }
+    } catch (err) {
+        console.error("Erro ao carregar perfil", err);
+    }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    const panel = document.getElementById("perfilPanel");
+    const overlay = document.getElementById("perfilOverlay");
+    const btnPerfil = document.getElementById("btnPerfilAbrir");
+    const closePerfil = document.getElementById("closePerfil");
+    btnPerfil.addEventListener("click", () => {
+        overlay.style.display = "block";
+        panel.style.bottom = "0";
+        document.body.classList.add("no-scroll");
+        carregarPerfil();
+    });
+    closePerfil.addEventListener("click", () => {
+        overlay.style.display = "none";
+        panel.style.bottom = "-100%";
+        document.body.classList.remove("no-scroll");
+    });
+});
+
+</script>
 </body>
 
 </html>

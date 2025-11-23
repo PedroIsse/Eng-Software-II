@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="pt-BR">
 
 <head>
@@ -17,7 +17,7 @@
         <section class="login-box">
 
             <div class="btn-voltar">
-                <i class="ri-arrow-left-line" onclick="history.back()" style="cursor: pointer;"></i>
+                <a href="telaLogin.html" class="ri-arrow-left-line"></a>
             </div>
 
             <div class="box-titulo">
@@ -79,7 +79,7 @@
             </div>
 
 
-            <a href="telaCadastroPassageiro2.html" class="btn">Próximo passo</a>
+            <button class="btn" id="btnCadastrarPassageiro">Próximo passo</button>
 
             <script>
                 function removerPreview(inputId, imgId) {
@@ -131,6 +131,83 @@
 
     </div>
 
+
+<script type="module">
+
+import { db, auth, storage } from "./js/firebase.js";
+import { createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-auth.js";
+import { doc, setDoc } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-firestore.js";
+import { ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-storage.js";
+
+async function salvarArquivo(refe, arquivo) {
+    await uploadBytes(refe, arquivo);
+    return await getDownloadURL(refe);
+}
+
+async function cadastrarPassageiro() {
+    const nome = document.getElementById("Nome").value;
+    const sobrenome = document.getElementById("Sobrenome").value;
+    const email = document.getElementById("email").value;
+    const senha = document.getElementById("senha1").value;
+
+    if (!email || !senha) {
+        alert("Por favor preencha email e senha.");
+        return;
+    }
+
+    try {
+        const cred = await createUserWithEmailAndPassword(auth, email, senha);
+        const uid = cred.user.uid;
+
+        const fotoFile = document.getElementById("file-fotoPerfil").files[0];
+        const matriculaFile = document.getElementById("file-matricula").files[0];
+
+        const fotoRef = ref(storage, `usuarios/${uid}/fotoPerfil.jpg`);
+        const matRef = ref(storage, `usuarios/${uid}/matricula.jpg`);
+
+        const fotoURL = fotoFile ? await salvarArquivo(fotoRef, fotoFile) : "";
+        const matriculaURL = matriculaFile ? await salvarArquivo(matRef, matriculaFile) : "";
+
+        await setDoc(doc(db, "passageiros", uid), {
+            nome,
+            sobrenome,
+            email,
+            fotoPerfilURL: fotoURL,
+            comprovanteMatriculaURL: matriculaURL,
+            createdAt: new Date().toISOString()
+        });
+
+        // redirect to step 2
+        window.location.href = "telaCadastroPassageiro2.html";
+    } catch (err) {
+        console.error(err);
+        alert("Erro ao cadastrar: " + (err.message || err));
+    }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    const btn = document.getElementById("btnCadastrarPassageiro");
+    if (btn) btn.addEventListener("click", (e) => { e.preventDefault(); cadastrarPassageiro(); });
+
+    // preserve existing preview handlers if present
+    const setupPreview = (inputId, imgId) => {
+        const input = document.getElementById(inputId);
+        const img = document.getElementById(imgId);
+        if (!input || !img) return;
+        input.addEventListener("change", () => {
+            const arquivo = input.files[0];
+            if (arquivo) {
+                img.src = URL.createObjectURL(arquivo);
+            } else {
+                img.src = "images/adicionar-imagem.svg";
+            }
+        });
+    };
+    setupPreview("file-fotoPerfil","preview-fotoPerfil");
+    setupPreview("file-matricula","preview-matricula");
+});
+
+</script>
 </body>
 
 </html>
