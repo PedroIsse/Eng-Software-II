@@ -17,10 +17,10 @@
             <div class="btn-voltar">
                 <i class="ri-arrow-left-line" onclick="history.back()" style="cursor: pointer;"></i>
             </div>
-            
+
             <div class="box-titulo">
 
-                <h1 class="titulo">Informações de cadastro</h2>
+                <h1 class="titulo">Informações de cadastro</h1>
 
             </div>
             <form class="upload-container form-login">
@@ -50,8 +50,8 @@
 
             </form>
             <div class="btn-group">
-                <a href="telaPrincipal.html" class="btns upload">Pular</a>
-                <a href="telaPrincipal.html" id="openPopup" class="btns upload">Finalizar</a>
+                <a href="telaLogin.html" id="openPopupPular" class="btns upload">Pular</a>
+                <a href="telaLogin.html" id="openPopup" class="btns upload">Finalizar</a>
             </div>
 
             <div id="popup" class="popup">
@@ -59,24 +59,50 @@
                     <h2>Gostaria de se cadastrar como motorista?</h2>
 
                     <div class="btn-group">
-                        <a href="telaPrincipal.html" id="closePopup" class="btns upload">Não</a>
+                        <a id="closePopup" class="btns upload">Não</a>
                         <a href="telaCadastroMotorista.html" class="btns upload">Sim</a>
                     </div>
                 </div>
             </div>
 
+            <div id="popupPular" class="popup">
+                <div class="popup-content">
+                    <h2>Cadastro finalizado.</h2>
+                    <h3>Você será redirecionado a tela de login.</h3>
+                    <br>
+
+                    <div class="btn-group">
+                        <a href="telaLogin.html" id="closePopupPular" class="btns upload">Ok</a>
+
+                    </div>
+                </div>
+            </div>
+
             <script>
-                // Abrir popup
+                // Abrir popup principal
                 document.getElementById("openPopup").onclick = function (e) {
-                    e.preventDefault(); // impede ir para #
+                    e.preventDefault();
                     document.getElementById("popup").style.display = "flex";
                 }
 
-                // Fechar popup
+                // Abrir popup Pular
+                document.getElementById("openPopupPular").onclick = function (e) {
+                    e.preventDefault();
+                    document.getElementById("popupPular").style.display = "flex";
+                }
+
+                // Botão "Não" → fechar popup principal e abrir popupPular
                 document.getElementById("closePopup").onclick = function () {
-                    document.getElementById("popup").style.display = "none";
+                    document.getElementById("popup").style.display = "none";       // fecha popup
+                    document.getElementById("popupPular").style.display = "flex";  // abre popupPular
+                }
+
+                // Botão OK do popupPular
+                document.getElementById("closePopupPular").onclick = function () {
+                    document.getElementById("popupPular").style.display = "none";
                 }
             </script>
+
 
         </section>
     </main>

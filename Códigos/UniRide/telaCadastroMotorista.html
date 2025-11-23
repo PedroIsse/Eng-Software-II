@@ -39,14 +39,14 @@
                     <label for="file-docCarro" class="btn upload">Enviar comprovante</label>
                 </form>
             </div>
-                <div class="upload-container box">
-                    <h2>Seguro do Veículo</h2>
-                    <img src="images/adicionar-imagem.svg" class="upload-img" id="preview-seguro" height="80px">
-                    <form>
-                        <input type="file" id="file-seguro" accept="image/*" hidden>
-                        <label for="file-seguro" class="btn upload">Enviar comprovante</label>
-                    </form>
-                </div>
+            <div class="upload-container box">
+                <h2>Seguro do Veículo</h2>
+                <img src="images/adicionar-imagem.svg" class="upload-img" id="preview-seguro" height="80px">
+                <form>
+                    <input type="file" id="file-seguro" accept="image/*" hidden>
+                    <label for="file-seguro" class="btn upload">Enviar comprovante</label>
+                </form>
+            </div>
 
             <div class="upload-container box">
                 <h2>Selfie com CNH:</h2>
@@ -58,9 +58,22 @@
             </div>
 
             <div class="btn-group">
-                <a href="telaPrincipal.html" id="openPopup" class="btns upload">Finalizar</a>
+                <a id="openPopupPular" class="btns upload">Finalizar</a>
             </div>
-        </div>
+
+            <div id="popupPular" class="popup">
+                <div class="popup-content">
+                    <h2>Cadastro finalizado.</h2>
+                    <h3>Você será redirecionado a tela de login.</h3>
+                    <br>
+
+                    <div class="btn-group">
+                        <a href="telaLogin.html" id="closePopupPular" class="btns upload">Ok</a>
+
+                    </div>
+                </div>
+            </div>
+    </div>
     </section>
     <script>
         function configurarPreview(inputId, imgId) {
@@ -79,6 +92,16 @@
         configurarPreview("file-docCarro", "preview-docCarro");
         configurarPreview("file-seguro", "preview-seguro");
         configurarPreview("file-selfie", "preview-selfie");
+
+        document.getElementById("openPopupPular").onclick = function (e) {
+            e.preventDefault();
+            document.getElementById("popupPular").style.display = "flex";
+        }
+
+        document.getElementById("closePopupPular").onclick = function () {
+            document.getElementById("popupPular").style.display = "none";
+        }
+
     </script>
 </body>
 

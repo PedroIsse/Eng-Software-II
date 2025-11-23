@@ -64,6 +64,7 @@
                 <form>
                     <input type="file" id="file-fotoPerfil" accept="image/*" hidden>
                     <label for="file-fotoPerfil" class="btn upload">Enviar imagem</label>
+                    
                 </form>
             </div>
 
@@ -73,6 +74,7 @@
                 <form>
                     <input type="file" id="file-matricula" accept="image/*" hidden>
                     <label for="file-matricula" class="btn upload">Enviar comprovante</label>
+                    
                 </form>
             </div>
 
@@ -80,6 +82,14 @@
             <a href="telaCadastroPassageiro2.html" class="btn">Próximo passo</a>
 
             <script>
+                function removerPreview(inputId, imgId) {
+                    const input = document.getElementById(inputId);
+                    const img = document.getElementById(imgId);
+
+                    input.value = "";
+                    img.src = "";
+                }
+
                 function togglePassword(senhaId, toggleId) {
                     const campo = document.getElementById(senhaId);
                     const icone = document.getElementById(toggleId);

@@ -360,7 +360,7 @@ a.abrir-popup {
 .top-bar {
     width: 100%;
     height: 10%;
-    max-width: 600px;
+    max-width: 500px;
     background: linear-gradient(90deg, #b300ff, #7700cc);
     display: flex;
     justify-content: center;
@@ -384,7 +384,7 @@ a.abrir-popup {
     bottom: 0;
     width: 100%;
     z-index: 10;
-    max-width: 600px;
+    max-width: 500px;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -474,8 +474,11 @@ a {
     max-width: 350px;
     height: auto;
     object-fit: contain;
+
     border-radius: 14px;
+    border: 2px dashed #ffffff60; /* borda pontilhada */
+
     margin: 10px 0 25px 0;
     background: #ffffff20;
-    padding: 5px;
+    padding: 15px; /* leve aumento para deixar bonito */
 }
