@@ -1,20 +1,22 @@
 // js/firebase.js
-// Centralized Firebase initialization and exports
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-app.js";
 import { getFirestore } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-firestore.js";
 import { getAuth } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-auth.js";
-import { getStorage } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-storage.js";
+// REMOVIDO: import { getStorage } ...
 
 const firebaseConfig = {
-    apiKey: "AIzaSyA3dP8jtH0isgqlqIiBXHyDzscW9ha3OvA",
-    authDomain: "uniride-8b7e9.firebaseapp.com",
-    projectId: "uniride-8b7e9",
-    storageBucket: "uniride-8b7e9.firebasestorage.app",
-    messagingSenderId: "336015345420",
-    appId: "1:336015345420:web:ee9c3af4f50d18ad54ab29"
+    apiKey: "AIzaSyBUO_ymNGqxpVKQICOAYtaW-VOkTnPo7eU",
+    authDomain: "uniride666.firebaseapp.com",
+    projectId: "uniride666",
+    // storageBucket: REMOVIDO OU IGNORADO
+    messagingSenderId: "1022762076576",
+    appId: "1:1022762076576:web:be29ce792fdfafb8a9fcc5"
 };
 
+// Inicializar Firebase
 const app = initializeApp(firebaseConfig);
+
+// Exportar módulos
 export const db = getFirestore(app);
 export const auth = getAuth(app);
-export const storage = getStorage(app);
+// export const storage = getStorage(app); // REMOVIDO

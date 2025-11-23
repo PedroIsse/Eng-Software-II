@@ -63,7 +63,8 @@ label {
 
 input[type="email"],
 input[type="password"],
-input[type="text"] {
+input[type="text"],
+input[type="date"] {
     width: 100%;
     padding: 12px 16px;
     margin: 8px 0 20px 0;
@@ -75,6 +76,7 @@ input[type="text"] {
 
 .sobreVoce {
     width: 100%;
+    resize: none;
     padding: 12px 16px;
     margin: 8px 0 20px 0;
     border-radius: 25px;
@@ -239,7 +241,7 @@ h2 {
     padding-bottom: 20px;
 }
 
-.ri-arrow-left-line{
+.ri-arrow-left-line {
     color: white;
 }
 
@@ -482,9 +484,64 @@ a {
     object-fit: contain;
 
     border-radius: 14px;
-    border: 2px dashed #ffffff60; /* borda pontilhada */
+    border: 2px dashed #ffffff60;
+    /* borda pontilhada */
 
     margin: 10px 0 25px 0;
     background: #ffffff20;
-    padding: 15px; /* leve aumento para deixar bonito */
+    padding: 15px;
+    /* leve aumento para deixar bonito */
+}
+
+.modal-crop {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 1000;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.crop-container {
+    width: 90%;
+    max-width: 500px;
+    height: 60vh;
+    background: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.crop-container img {
+    display: block;
+    max-width: 100%;
+}
+
+.crop-controls {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-crop {
+    padding: 10px 25px;
+    border-radius: 20px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-confirmar {
+    background: #00e676;
+    color: #fff;
+}
+
+.btn-cancelar {
+    background: #ff3b3b;
+    color: #fff;
 }
